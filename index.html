@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --bg-card: #ffffff;
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --text-link: #0066cc;
+            --border-color: #d2d2d7;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --accent: #0066cc;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #000000;
+            --bg-secondary: #161617;
+            --bg-card: #1d1d1f;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-link: #2997ff;
+            --border-color: #424245;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.4);
+            --accent: #2997ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        .content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+            animation: fadeIn 0.6s ease;
+        }
+
+        .page {
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: var(--bg-secondary);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideDown 0.8s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* Key Achievements */
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-title a:hover {
+            color: var(--accent);
+        }
+
+        .github-link {
+            font-size: 0.9rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .blog-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border-radius: 50%;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">JD</a>
+            <ul class="nav-menu">
+                <li><a class="nav-link active" data-page="home">Home</a></li>
+                <li><a class="nav-link" data-page="projects">Projects</a></li>
+                <li><a class="nav-link" data-page="blog">Blog</a></li>
+                <li><a class="nav-link" data-page="readings">Readings</a></li>
+                <li><a class="nav-link" data-page="resume">Resume</a></li>
+                <li><a class="nav-link" data-page="contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>John Doe</h1>
+                    <p class="subtitle">Full Stack Developer & Technical Writer</p>
+                    <p class="hero-description">
+                        Passionate about building elegant solutions to complex problems. 
+                        Specializing in modern web technologies and cloud architecture with 
+                        5+ years of experience in delivering scalable applications.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#" class="btn btn-primary" onclick="showPage('projects')">View Projects</a>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Get in Touch</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🏆</div>
+                        <h3 class="achievement-title">Award-Winning Project</h3>
+                        <p class="achievement-description">
+                            Led development of <a href="https://github.com/yourusername/ai-assistant" target="_blank">AI Assistant Tool</a> 
+                            that won Best Innovation Award at TechConf 2024, serving 10,000+ daily active users.
+                        </p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">📚</div>
+                        <h3 class="achievement-title">Published Research</h3>
+                        <p class="achievement-description">
+                            Co-authored "Optimizing Neural Networks for Edge Computing" published in 
+                            International Journal of Computer Science, cited by 50+ researchers.
+                        </p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🚀</div>
+                        <h3 class="achievement-title">Open Source Contributor</h3>
+                        <p class="achievement-description">
+                            Maintained <a href="https://github.com/yourusername/react-components" target="_blank">React Component Library</a> 
+                            with 5,000+ GitHub stars and 100+ contributors worldwide.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" style="background: var(--bg-secondary);">
+                <h2 class="section-title">Professional Experience</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="achievement-card" style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Senior Full Stack Developer</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Tech Corp • 2022 - Present</p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                            <li>Architected microservices infrastructure serving 1M+ requests daily</li>
+                            <li>Led team of 5 developers in agile environment</li>
+                            <li>Reduced deployment time by 60% through CI/CD optimization</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Software Engineer</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">StartupXYZ • 2020 - 2022</p>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                            <li>Built real-time analytics dashboard using React and D3.js</li>
+                            <li>Implemented REST APIs handling 10,000+ requests per minute</li>
+                            <li>Mentored 3 junior developers and conducted code reviews</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <section class="section">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">🤖</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/ai-chatbot" target="_blank">
+                                    AI Chatbot Platform <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                Intelligent chatbot platform using GPT-4 API with custom training capabilities. 
+                                Features real-time responses and multi-language support.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">📊</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/analytics-dashboard" target="_blank">
+                                    Analytics Dashboard <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                Real-time data visualization dashboard with advanced filtering and export capabilities. 
+                                Processes millions of data points efficiently.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🛒</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/ecommerce-platform" target="_blank">
+                                    E-Commerce Platform <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                Full-featured e-commerce solution with payment integration, inventory management, 
+                                and automated order processing.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Stripe</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🎮</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/game-engine" target="_blank">
+                                    2D Game Engine <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                Lightweight 2D game engine built from scratch with physics simulation, 
+                                particle systems, and audio management.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">WebGL</span>
+                                <span class="tech-tag">Canvas API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🔒</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/password-manager" target="_blank">
+                                    Secure Password Manager <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                End-to-end encrypted password manager with biometric authentication 
+                                and secure cloud sync across devices.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Electron</span>
+                                <span class="tech-tag">Crypto.js</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">📱</div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                <a href="https://github.com/yourusername/fitness-tracker" target="_blank">
+                                    Fitness Tracker App <span class="github-link">↗</span>
+                                </a>
+                            </h3>
+                            <p class="project-description">
+                                Cross-platform mobile app for tracking workouts, nutrition, and health metrics 
+                                with social features and challenges.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Blog Page -->
+        <div id="blog" class="page">
+            <section class="section">
+                <h2 class="section-title">Technical Writing</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <p class="blog-date">January 15, 2025</p>
+                        <h3 class="blog-title">Building Scalable Microservices with Kubernetes</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to designing, deploying, and managing microservices 
+                            architecture using Kubernetes, including best practices for service mesh and observability.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                    <article class="blog-card">
+                        <p class="blog-date">December 28, 2024</p>
+                        <h3 class="blog-title">The Future of Web Development: Web3 and Beyond</h3>
+                        <p class="blog-excerpt">
+                            Exploring the intersection of traditional web development and blockchain technology, 
+                            and what it means for developers in 2025.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                    <article class="blog-card">
+                        <p class="blog-date">December 10, 2024</p>
+                        <h3 class="blog-title">Optimizing React Performance: Advanced Techniques</h3>
+                        <p class="blog-excerpt">
+                            Deep dive into React performance optimization including code splitting, 
+                            lazy loading, memoization, and virtual scrolling implementation.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                    <article class="blog-card">
+                        <p class="blog-date">November 22, 2024</p>
+                        <h3 class="blog-title">TypeScript Best Practices for Large-Scale Applications</h3>
+                        <p class="blog-excerpt">
+                            Learn how to leverage TypeScript's advanced features to build maintainable 
+                            and type-safe applications at scale.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                    <article class="blog-card">
+                        <p class="blog-date">November 5, 2024</p>
+                        <h3 class="blog-title">GraphQL vs REST: A Practical Comparison</h3>
+                        <p class="blog-excerpt">
+                            Real-world analysis of when to choose GraphQL over REST APIs, 
+                            with performance benchmarks and implementation examples.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                    <article class="blog-card">
+                        <p class="blog-date">October 18, 2024</p>
+                        <h3 class="blog-title">Implementing CI/CD Pipelines with GitHub Actions</h3>
+                        <p class="blog-excerpt">
+                            Step-by-step guide to setting up automated testing, building, and deployment 
+                            workflows using GitHub Actions for modern applications.
+                        </p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Readings Page -->
+        <div id="readings" class="page">
+            <section class="section">
+                <h2 class="section-title">Recommended Readings</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <h3 class="blog-title">Clean Code</h3>
+                        <p class="blog-date">by Robert C. Martin</p>
+                        <p class="blog-excerpt">
+                            Essential reading for writing maintainable, readable code. This book transformed 
+                            how I approach software craftsmanship and code quality.
+                        </p>
+                        <div class="project-tech" style="margin-top: 1rem;">
+                            <span class="tech-tag">DevOps</span>
+                            <span class="tech-tag">Performance</span>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <h3 class="blog-title">You Don't Know JS</h3>
+                        <p class="blog-date">by Kyle Simpson</p>
+                        <p class="blog-excerpt">
+                            Deep dive into JavaScript's core mechanisms. This series helped me truly understand 
+                            closures, prototypes, and async patterns.
+                        </p>
+                        <div class="project-tech" style="margin-top: 1rem;">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <h3 class="blog-title">Site Reliability Engineering</h3>
+                        <p class="blog-date">by Google SRE Team</p>
+                        <p class="blog-excerpt">
+                            How Google runs production systems at enormous scale. Invaluable lessons on 
+                            reliability, monitoring, and incident management.
+                        </p>
+                        <div class="project-tech" style="margin-top: 1rem;">
+                            <span class="tech-tag">SRE</span>
+                            <span class="tech-tag">Operations</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Resume Page -->
+        <div id="resume" class="page">
+            <section class="section">
+                <h2 class="section-title">Resume</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="achievement-card" style="text-align: center; margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">John Doe</h3>
+                        <p style="color: var(--text-secondary);">Full Stack Developer | Technical Writer | Open Source Contributor</p>
+                    </div>
+
+                    <div class="achievement-card" style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent);">Education</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <h4 style="font-size: 1.1rem;">Master of Science in Computer Science</h4>
+                            <p style="color: var(--text-secondary);">Stanford University • 2018 - 2020</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">GPA: 3.9/4.0 • Focus: Machine Learning & Distributed Systems</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem;">Bachelor of Science in Software Engineering</h4>
+                            <p style="color: var(--text-secondary);">MIT • 2014 - 2018</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Summa Cum Laude • Dean's List All Semesters</p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card" style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent);">Technical Skills</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div>
+                                <strong>Languages:</strong> JavaScript/TypeScript, Python, Java, Go, Rust, SQL
+                            </div>
+                            <div>
+                                <strong>Frontend:</strong> React, Vue.js, Next.js, Angular, Svelte, Tailwind CSS
+                            </div>
+                            <div>
+                                <strong>Backend:</strong> Node.js, Express, Django, Spring Boot, GraphQL, REST
+                            </div>
+                            <div>
+                                <strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch, DynamoDB
+                            </div>
+                            <div>
+                                <strong>Cloud/DevOps:</strong> AWS, GCP, Azure, Docker, Kubernetes, CI/CD, Terraform
+                            </div>
+                            <div>
+                                <strong>Tools:</strong> Git, Jest, Webpack, Vite, Jenkins, Prometheus, Grafana
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card" style="margin-bottom: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent);">Certifications</h3>
+                        <ul style="line-height: 1.8; padding-left: 1.5rem;">
+                            <li>AWS Certified Solutions Architect - Professional</li>
+                            <li>Google Cloud Professional Cloud Developer</li>
+                            <li>Certified Kubernetes Administrator (CKA)</li>
+                            <li>MongoDB Certified Developer Associate</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="#" class="btn btn-primary">Download PDF Resume</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="section">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        I'm always interested in hearing about new opportunities and interesting projects. 
+                        Feel free to reach out if you'd like to connect!
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" class="social-link" title="GitHub">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/johndoe" target="_blank" class="social-link" title="LinkedIn">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/johndoe" target="_blank" class="social-link" title="Twitter">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://dev.to/johndoe" target="_blank" class="social-link" title="Dev.to">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04 2.45.56-.02c.41 0 .63-.07.83-.26.24-.24.26-.36.26-2.2 0-1.91-.02-1.96-.29-2.18zM0 4.94v14.12h24V4.94H0zM8.56 15.3c-.44.58-1.06.77-2.53.77H4.71V8.53h1.4c1.67 0 2.16.18 2.6.9.27.43.29.6.32 2.57.05 2.23-.02 2.73-.47 3.3zm5.09-5.47h-2.47v1.77h1.52v1.28l-.72.04-.75.03v1.77l1.22.03 1.2.04v1.28h-1.6c-1.53 0-1.6-.01-1.87-.3l-.3-.28v-3.16c0-3.02.01-3.18.25-3.48.23-.31.25-.31 1.88-.31h1.64v1.3zm4.68 5.45c-.17.43-.64.79-1 .79-.18 0-.45-.15-.67-.39-.32-.32-.45-.63-.82-2.08l-.9-3.39-.45-1.67h.76c.4 0 .75.02.75.05 0 .06 1.16 4.54 1.26 4.83.04.15.32-.7.73-2.3l.66-2.52.74-.04c.4-.02.73 0 .73.04 0 .14-1.67 6.38-1.8 6.68z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2025 John Doe. Built with ❤️ and lots of ☕</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-icon').textContent = '☀️';
+        }
+
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+            
+            // Update nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add click listeners to nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('data-page');
+                showPage(pageId);
+            });
+        });
+
+        // Smooth scroll animation on page load
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.achievement-card, .project-card, .blog-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>="margin-top: 1rem;">
+                            <span class="tech-tag">Software Engineering</span>
+                            <span class="tech-tag">Best Practices</span>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <h3 class="blog-title">Designing Data-Intensive Applications</h3>
+                        <p class="blog-date">by Martin Kleppmann</p>
+                        <p class="blog-excerpt">
+                            Comprehensive guide to the big ideas behind reliable, scalable, and maintainable systems. 
+                            A must-read for backend engineers.
+                        </p>
+                        <div class="project-tech" style="margin-top: 1rem;">
+                            <span class="tech-tag">System Design</span>
+                            <span class="tech-tag">Databases</span>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <h3 class="blog-title">The Pragmatic Programmer</h3>
+                        <p class="blog-date">by David Thomas & Andrew Hunt</p>
+                        <p class="blog-excerpt">
+                            Timeless advice on becoming a better programmer. Covers everything from personal 
+                            responsibility to architectural techniques.
+                        </p>
+                        <div class="project-tech" style="margin-top: 1rem;">
+                            <span class="tech-tag">Career Development</span>
+                            <span class="tech-tag">Programming</span>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <h3 class="blog-title">Accelerate</h3>
+                        <p class="blog-date">by Nicole Forsgren, Jez Humble, Gene Kim</p>
+                        <p class="blog-excerpt">
+                            Scientific approach to DevOps and software delivery performance. Data-driven insights 
+                            on what makes high-performing technology organizations.
+                        </p>
+                        <div class="project-tech" style
