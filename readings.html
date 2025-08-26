@@ -14,13 +14,13 @@
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="header">
       <div class="container nav">
-        <a class="brand" href="/">
+        <a class="brand" href="index.html">
           <div class="brand-mark" aria-hidden="true">VT</div>
           <div>Venkatesh Terikuti</div>
         </a>
         <nav aria-label="Primary">
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="writing.html">Blog</a></li>
             <li><a class="active" href="readings.html">Readings</a></li>
@@ -69,3 +69,7 @@
     <script src="assets/site.js"></script>
   </body>
 </html>
+
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
