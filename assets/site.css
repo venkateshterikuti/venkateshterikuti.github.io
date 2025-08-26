@@ -92,3 +92,5 @@ footer{padding:var(--space-7) 0;border-top:1px solid var(--border);color:var(--m
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){.btn,.card,.list-item,.reveal{transition:none!important}}
+
+
