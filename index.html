@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home — Venkatesh Terikuti</title>
+    <meta name="description" content="Home">
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header role="banner" class="header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <div class="brand-mark" aria-hidden="true">VT</div>
+          <div>Venkatesh Terikuti</div>
+        </a>
+        <nav aria-label="Primary">
+          <ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="writing.html">Blog</a></li>
+<li><a href="readings.html">Readings</a></li>
+<li><a href="resume.html">Résumé</a></li>
+<li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme"></button>
+          <a class="btn" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+  <section class="hero container">
+    <div class="eyebrow">Machine Learning • MLOps • Data Science</div>
+    <h1 class="title">Shipping reliable AI systems with research-grade rigor.</h1>
+    <p class="lead">I'm a Machine Learning Engineer & Data Scientist focused on <strong>semantic search</strong>, <strong>LLM-powered RAG</strong>, and <strong>operational ML</strong>. I like clean abstractions, fast inference, and production reliability under tight latency budgets.</p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="projects.html">Explore projects</a>
+      <a class="btn" href="writing.html">Read my blog</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container reveal">
+      <p class="kicker">About</p>
+      <h2 class="section-title">A little about me</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Profile</h3>
+          <p>Recent M.S. in Data Science (2025). 6+ years across ML engineering, data science, and MLOps. I've built and operated vector search, multi‑agent RAG, and containerized model services on AWS (EKS/SageMaker), with CI/CD (Jenkins → ArgoCD) and observability.</p>
+          <ul class="list" style="margin-top: 10px;">
+            <li class="list-item"><strong>Focus</strong> — Semantic Search, LLM Apps, MLOps</li>
+            <li class="list-item"><strong>Latency</strong> — sub‑100ms retrieval targets</li>
+            <li class="list-item"><strong>Tooling</strong> — Python, FastAPI, FAISS/pgVector, T5/SBERT, Docker/K8s</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Principles</h3>
+          <p>Simple interfaces, measurable outcomes, and empathetic collaboration. I obsess over the last 10%: edge‑case reliability, observability, and docs that age well.</p>
+          <div class="tags">
+            <span class="tag">Reliability</span>
+            <span class="tag">UX polish</span>
+            <span class="tag">Reproducibility</span>
+            <span class="tag">Ownership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="container reveal">
+      <p class="kicker">Highlights</p>
+      <h2 class="section-title">Key achievements</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Sub‑100ms Vector Search</h3>
+          <p class="meta">MiniLM + FAISS • FLAN‑T5 filters</p>
+          <p>Two‑stage search stack (SBERT embeddings + FAISS, JSON facet extraction with FLAN‑T5) tuned for reliability and speed on a 1.3M‑item catalog.</p>
+        </article>
+        <article class="card">
+          <h3>MLOps at Scale</h3>
+          <p class="meta">Jenkins → ArgoCD • EKS/SageMaker</p>
+          <p>Built CI/CD for model rollouts, canaries and blue‑green deployments, IaC, and tracing dashboards—cut deployment cycles dramatically.</p>
+        </article>
+        <article class="card">
+          <h3>Agentic RAG Copilot</h3>
+          <p class="meta">pgVector • LangChain • Guardrails</p>
+          <p>Internal knowledge assistant with retrieval evaluation, caching, and observability to keep latency predictable under load.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container reveal">
+      <p class="kicker">Career</p>
+      <h2 class="section-title">Professional experience</h2>
+      <div class="timeline">
+        <article class="t-item">
+          <div class="t-head">
+            <h3>ML Research Assistant</h3>
+            <div class="meta">University of Arizona • 2025 — Present</div>
+          </div>
+          <ul>
+            <li>Built a scalable semantic search engine (SBERT + FAISS) with FLAN‑T5 facet extraction for e‑commerce queries.</li>
+            <li>Designed retrieval to hit sub‑100ms SLOs; improved relevance metrics substantially over keyword baselines.</li>
+          </ul>
+        </article>
+        <article class="t-item">
+          <div class="t-head">
+            <h3>Sr. Software Engineer — Data Scientist</h3>
+            <div class="meta">GlobalLogic (Flipkart) • 2021 — 2023</div>
+          </div>
+          <ul>
+            <li>Deployed FastAPI microservices for real‑time ML features; managed service mesh on AWS EKS.</li>
+            <li>Automated CI/CD (Jenkins, GitLab CI → ArgoCD) for SageMaker/EKS rollouts; reduced deployment time by 40%.</li>
+          </ul>
+        </article>
+        <article class="t-item">
+          <div class="t-head">
+            <h3>Senior Data Analyst</h3>
+            <div class="meta">Geetham Software (Lytx) • 2019 — 2021</div>
+          </div>
+          <ul>
+            <li>Scaled ingestion/feature pipelines for telematics events; delivered churn and segmentation insights.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="hero-ctas" style="margin-top:18px;">
+        <a class="btn" href="projects.html">See projects</a>
+        <a class="btn" href="resume.html">Résumé</a>
+      </div>
+    </div>
+  </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        © <span id="year"></span> Venkatesh Terikuti. Built with care.
+      </div>
+    </footer>
+    <script src="assets/site.js"></script>
+  </body>
+</html>
