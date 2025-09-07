@@ -110,7 +110,7 @@ author:
   location         : ""
   email            : 
   links:
-      - label: "X"
+    - label: "X"
       icon: "fab fa-fw fa-square-x-twitter" 
       url: "https://x.com/arundeep_T"
     - label: "GitHub"
@@ -119,7 +119,6 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:vterikuti@gmail.com"
-      url: "mailto:"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
       url: "https://www.linkedin.com/in/vterikuti/"
@@ -144,8 +143,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
       url: "https://www.linkedin.com/in/vterikuti/"
-    
-      # url:
     # - label: "Facebook"
       # icon: "fab fa-fw fa-facebook-square"
       # url:
