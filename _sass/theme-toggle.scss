@@ -1,14 +1,15 @@
-// Profile Picture Fix (ensure true square container and image)
+// Profile Picture Fix (square shape)
 .author__avatar {
   width: 150px !important;
   height: 150px !important;
-  border-radius: 50% !important;
+  border-radius: 15px !important;
   overflow: hidden !important;
+  display: block !important;
 }
 .author__avatar img {
   width: 100% !important;
   height: 100% !important;
-  border-radius: 50% !important;
+  border-radius: 15px !important;
   object-fit: cover !important;
   object-position: center !important;
   display: block !important;
@@ -83,7 +84,7 @@
   }
   
   .masthead {
-    background-color: var(--card-background) !important;
+    background-color: #1a1a1a !important;
     border-bottom: 1px solid var(--border-color) !important;
     box-shadow: none !important;
     
@@ -92,7 +93,7 @@
     }
     
     .greedy-nav {
-      background-color: var(--card-background) !important;
+      background-color: #1a1a1a !important;
       box-shadow: none !important;
       
       a {
@@ -117,7 +118,7 @@
   }
   
   .sidebar {
-    background-color: var(--card-background) !important;
+    background-color: #1a1a1a !important;
     border-right: 1px solid var(--border-color) !important;
     
     .author__avatar img {
