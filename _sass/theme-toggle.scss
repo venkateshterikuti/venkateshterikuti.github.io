@@ -1,10 +1,17 @@
-// Profile Picture Fix
-.author__avatar img {
+// Profile Picture Fix (ensure true square container and image)
+.author__avatar {
   width: 150px !important;
   height: 150px !important;
   border-radius: 50% !important;
+  overflow: hidden !important;
+}
+.author__avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
   object-fit: cover !important;
   object-position: center !important;
+  display: block !important;
 }
 
 // Theme Toggle Button Styles
@@ -78,6 +85,7 @@
   .masthead {
     background-color: var(--card-background) !important;
     border-bottom: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
     
     .site-title {
       color: var(--text-color) !important;
@@ -85,6 +93,7 @@
     
     .greedy-nav {
       background-color: var(--card-background) !important;
+      box-shadow: none !important;
       
       a {
         color: var(--text-color) !important;
@@ -96,6 +105,13 @@
       
       .visible-links a:before {
         background: var(--primary-color) !important;
+      }
+
+      .search__toggle,
+      .greedy-nav__toggle {
+        background: transparent !important;
+        color: var(--text-color) !important;
+        border: 1px solid var(--border-color) !important;
       }
     }
   }
@@ -129,6 +145,7 @@
   
   .page__content {
     background-color: var(--background-color) !important;
+    box-shadow: none !important;
     
     h1, h2, h3, h4, h5, h6 {
       color: var(--text-color) !important;
@@ -166,6 +183,7 @@
     .archive__item {
       background-color: var(--card-background) !important;
       border: 1px solid var(--border-color) !important;
+      box-shadow: none !important;
       
       .archive__item-title {
         color: var(--text-color) !important;
