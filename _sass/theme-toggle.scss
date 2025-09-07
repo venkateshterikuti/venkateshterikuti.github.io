@@ -1,0 +1,157 @@
+// Theme Toggle Button Styles
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  // Light theme styles
+  [data-theme="light"] & {
+    border-color: #333;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.95);
+      transform: scale(1.1);
+    }
+  }
+  
+  // Dark theme styles  
+  [data-theme="dark"] & {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.95);
+      transform: scale(1.1);
+    }
+  }
+  
+  i {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover i {
+    transform: rotate(15deg);
+  }
+}
+
+// Dark theme CSS variables and overrides
+[data-theme="dark"] {
+  // Override minimal-mistakes variables for dark theme
+  --background-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --primary-color: #4a9eff;
+  --border-color: #333;
+  --code-background: #2d2d2d;
+  
+  // Apply dark theme styles
+  body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  .masthead {
+    background-color: #2d2d2d !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    
+    .site-title {
+      color: var(--text-color) !important;
+    }
+  }
+  
+  .sidebar {
+    background-color: #2d2d2d !important;
+    
+    .author__avatar img {
+      border: 3px solid var(--border-color) !important;
+    }
+    
+    .author__name {
+      color: var(--text-color) !important;
+    }
+    
+    .author__bio {
+      color: #b0b0b0 !important;
+    }
+    
+    .author__urls {
+      a {
+        color: var(--primary-color) !important;
+        
+        &:hover {
+          color: #66b3ff !important;
+        }
+      }
+    }
+  }
+  
+  .page__content {
+    background-color: var(--background-color) !important;
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-color) !important;
+    }
+    
+    p, li {
+      color: var(--text-color) !important;
+    }
+    
+    a {
+      color: var(--primary-color) !important;
+      
+      &:hover {
+        color: #66b3ff !important;
+      }
+    }
+    
+    code {
+      background-color: var(--code-background) !important;
+      color: #f8f8f2 !important;
+    }
+    
+    blockquote {
+      background-color: #2d2d2d !important;
+      border-left: 4px solid var(--primary-color) !important;
+      color: var(--text-color) !important;
+    }
+  }
+  
+  .page__footer {
+    background-color: #2d2d2d !important;
+    color: var(--text-color) !important;
+    
+    a {
+      color: var(--primary-color) !important;
+      
+      &:hover {
+        color: #66b3ff !important;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}

@@ -107,7 +107,7 @@ author:
   name             : "Venkatesh Terikuti"
   avatar           : "/assets/images/vterikuti.jpeg"
   bio              : "Data Science & Machine Learning <br> LLM applications and visualization"
-  location         : ""
+  location         : "San Jose, California, United States"
   email            : 
   links:
     - label: "X"
@@ -121,7 +121,7 @@ author:
       url: "mailto:vterikuti@gmail.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
-      url: "https://www.linkedin.com/in/vterikuti/"
+      url: "https://www.linkedin.com/in/terikuti/"
 
     #- label: "Facebook"
       #icon: "fab fa-fw fa-facebook-square"
@@ -142,7 +142,7 @@ footer:
       url: "https://github.com/venkateshterikuti"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
-      url: "https://www.linkedin.com/in/vterikuti/"
+      url: "https://www.linkedin.com/in/terikuti/"
     # - label: "Facebook"
       # icon: "fab fa-fw fa-facebook-square"
       # url:
