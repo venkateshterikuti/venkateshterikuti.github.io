@@ -37,7 +37,7 @@ Tip: Replace titles/descriptions with your real projects. Keep the inline backti
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-### Readings
+### Readings {#readings}
 A lightweight, evolving list of papers/articles worth revisiting. Swap in your own links and quick notes.
 
 - Paper or Article Title — `LLM`
@@ -47,8 +47,4 @@ A lightweight, evolving list of papers/articles worth revisiting. Swap in your o
   Practical insight you want to remember. [link]
 
 - Paper or Article Title — `Visualization`
-  A design or storytelling technique that stood out. [link]
-
-
-##### Contacts 
-Find me on GitHub: [venkateshterikuti](https://github.com/venkateshterikuti). Add your LinkedIn/Twitter here when ready.  
+  A design or storytelling technique that stood out. [link]  
