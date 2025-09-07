@@ -10,26 +10,12 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 # toc: true
 ---
 
-## Research
+## About
 
-👨‍🎓 I am a [PhD student](https://phd.uniroma1.it/web/ALESSIO-DEVOTO_nP1701081_IT.aspx) in Data Science at Sapienza University of Rome. 
-
-🌱 Working on developing efficient and interpretable machine learning models with [Simone Scardapane](https://www.sscardapane.it).
-
-<img src="https://img.icons8.com/?size=96&id=yqf95864UzeQ&format=png" alt="NVIDIA" width="20" height="20" style="display: inline;"> Applied Agent Research Intern at NVIDIA in Munich 🇩🇪
-
-🏴󠁧󠁢󠁳󠁣󠁴󠁿 Previously visiting researcher at Edinburgh NLP with [Pasquale Minervini](https://neuralnoise.com/).
-
-🔬 My research background spans both Computer Vision and Natural Language Processing, focusing on making AI systems more efficient and interpretable. My current research interests include efficient training and inference for Language and Vision Models [[1](https://arxiv.org/abs/2406.11430),[2](https://arxiv.org/abs/2408.08670)], AI Interpretability [[3](https://arxiv.org/abs/2410.15999), [4](https://arxiv.org/abs/2501.03432)], Adaptive & Conditional Computation methods [[2](https://arxiv.org/abs/2408.08670), [5](https://arxiv.org/abs/2312.10193)].
+Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and applied LLMs. This site hosts selected projects, notes, and a rotating list of readings. View my CV [here](/assets/docs/vterikuti.pdf).
 
 ## Blog 
-📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](https://alessiodevoto.github.io/blog/)!
-
-## Beyond Research
-
-- 📈 Training as a certified Life & Business Coach [International Coaching Federation](https://coachingfederation.org)
-- 🇪🇸 I spent an amazing semester as Erasmus student at [Universidad Politecnica de Valencia](http://www.upv.es/es), Spain.
--- 🏛️ I like languages (even [dead ones!](https://www.sssscomic.com/comicpages/196.jpg)). I teach Ancient Greek and Latin to high school and college students. 
+📝 I share notes, code snippets, and write‑ups — [take a look](/blog/)!
 
 ## Projects
 

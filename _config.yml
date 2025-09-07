@@ -16,17 +16,17 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "default",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alessio Devoto"
+title                    : "Venkatesh Terikuti"
 title_separator          : "-"
 subtitle                 : # "Alessio's personal website"
-name                     : "Alessio Devoto"
-description              : "Alessio Devoto's PhD Data Science personal website"
-url                      : "https://alessiodevoto.github.io"
+name                     : "Venkatesh Terikuti"
+description              : "Venkatesh Terikuti — data science, machine learning, LLMs, and visualization"
+url                      : "https://venkateshterikuti.github.io"
 baseurl                  : # "/"
-repository               : "alessiodevoto/alessiodevoto.github.io"
+repository               : "venkateshterikuti/venkateshterikuti.github.io"
 teaser                   : #/assets/images/fadingblue.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
 logo                     : #/assets/images/fadingblue.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "Alessio Devoto" #overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Venkatesh Terikuti" #overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 210
 comments:
@@ -104,35 +104,21 @@ analytics:
 
 # Site Author
 author:
-  name             : #"Alessio Devoto, PhD"
-  avatar           : "/assets/images/alessio_pp_standard.jpg"
-  bio              : "Computer Engineer <br> 
-                      PhD candidate in Data Science <br> <br> 
-                      <a href='https://classicalanthology.theclassicslibrary.com/2012/05/30/odyssey-1-1-6/'> 📖 <u> Ἄνδρα μοι ἔννεπε, Μοῦσα, πολύτροπον </u> <a>" 
-  location         : "La Sapienza, University of Rome <br>"
+  name             : "Venkatesh Terikuti"
+  avatar           : "/assets/images/vterikuti.jpeg"
+  bio              : "Data Science & Machine Learning <br> LLM applications and visualization"
+  location         : ""
   email            : 
   links:
-    - label: "X"
-      icon: "fab fa-fw fa-square-x-twitter" 
-      url: "https://x.com/devoto_alessio"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:devoto.alessio@gmail.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/alessiodevoto"
+      url: "https://github.com/venkateshterikuti"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
-      url: "https://www.linkedin.com/in/alessio-devoto/"
-    - label: "Semantic Scholar"
-      icon: "fa-solid fa-magnifying-glass"
-      url: "https://www.semanticscholar.org/author/Alessio-Devoto/2172309361"
-    - label: "Google Scholar"
-      icon: "fa-brands fa-google-scholar"
-      url: "https://scholar.google.com/citations?user=er31rp0AAAAJ&hl"
-    - label: "Bluesky"
-      icon: "fa-brands fa-bluesky"
-      url: "https://bsky.app/profile/alessiodevoto.bsky.social"
+      url: ""
 
     #- label: "Facebook"
       #icon: "fab fa-fw fa-facebook-square"
