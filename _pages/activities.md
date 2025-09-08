@@ -18,6 +18,9 @@ toc: false
 - **Deepers** <br> Member of the [Deepers](https://www.deepers.ai/) community. We aim at teaching Deep Learning to both developers and managers in the indutry, so that they can unlock AI's potential for business. [Here you can find some of the *Deepers* Python tutorials.](https://github.com/alessiodevoto/deepers)
 
 
+- **Cancer Diagnosis Classification Project** <br> A data mining project demonstrating supervised learning techniques on the breast cancer diagnostic dataset. Implemented and compared Support Vector Machine and Logistic Regression models to predict whether tumors are malignant or benign. The project includes comprehensive evaluation metrics, cross-validation, and achieves 90%+ accuracy. Built with Python's scientific ecosystem including pandas, scikit-learn, and matplotlib. [View on GitHub](https://github.com/venkateshterikuti/Cancer-Diagnosis-Classification-Project)
+
+
 
 
 
