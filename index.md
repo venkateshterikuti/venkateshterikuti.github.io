@@ -15,9 +15,8 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and applied LLMs. This site hosts selected projects, notes, and a rotating list of readings. View my CV [here](/assets/docs/vterikuti.pdf).
 
 ## Blog 
-📝 I share notes, code snippets, and write‑ups — [take a look](/blog/)!
+📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](/blog/)!
 
-### Recent Posts
 {% assign recent_posts = site.posts | limit: 2 %}
 {% for post in recent_posts %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
