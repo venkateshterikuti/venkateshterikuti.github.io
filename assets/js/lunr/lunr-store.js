@@ -49,26 +49,27 @@ var store = [
   {%- comment -%} Second: Individual Projects from activities page {%- endcomment -%}
   {%- assign activities_page = site.pages | where: "permalink", "/activities/" | first -%}
   {%- if activities_page -%}
-    {%- assign project_lines = activities_page.content | split: '- **' -%}
-    {%- for project_line in project_lines -%}
-      {%- if project_line contains '**' and project_line contains '<br>' -%}
-        {%- assign project_parts = project_line | split: '**' -%}
-        {%- if project_parts.size > 1 -%}
-          {%- assign project_title = project_parts[0] | strip -%}
-          {%- assign project_content = project_parts[1] | split: '<br>' -%}
-          {%- if project_content.size > 1 -%}
-            {%- assign project_desc = project_content[1] | strip_html | strip_newlines | strip -%}
-            {%- if project_title and project_title != "" and project_desc and project_desc != "" -%}
-              {
-                "title": {{ project_title | jsonify }},
-                "excerpt": {{ project_desc | jsonify }},
-                "categories": [],
-                "tags": ["projects", "activities"],
-                "url": {{ activities_page.url | relative_url | jsonify }},
-                "teaser": "",
-                "type": "projects"
-              },
-            {%- endif -%}
+    {%- comment -%}
+      New parser: iterate list items robustly. Works with markdown lists rendered to HTML.
+    {%- endcomment -%}
+    {%- assign items = activities_page.content | newline_to_br | split: '<br />- **' -%}
+    {%- for item in items -%}
+      {%- if item contains '**' -%}
+        {%- assign parts = item | split: '**' -%}
+        {%- assign title = parts[0] | strip | replace:'<br />','' -%}
+        {%- assign after = parts[1] | split: '<br>' -%}
+        {%- if after.size > 0 -%}
+          {%- assign desc = after[0] | strip_html | strip_newlines | strip -%}
+          {%- if title and title != '' and desc and desc != '' -%}
+            {
+              "title": {{ title | jsonify }},
+              "excerpt": {{ desc | jsonify }},
+              "categories": [],
+              "tags": ["projects", "activities"],
+              "url": {{ activities_page.url | relative_url | jsonify }},
+              "teaser": "",
+              "type": "projects"
+            },
           {%- endif -%}
         {%- endif -%}
       {%- endif -%}

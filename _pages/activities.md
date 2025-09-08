@@ -6,28 +6,16 @@ seo_title: "Alessio Devoto activities and projects"
 # last_modified_at: 2022-05-27T11:59:26-04:00
 toc: false
 ---
-- **6G-GOALS** <br> We use Artificial Intelligence for Goal and Semantic oriented communications to develop the next generation (6G) of telecom systems. See [the official website](https://sites.google.com/view/6ggoals/home) and the  [arxiv paper](https://arxiv.org/abs/2402.07573) for more info.
+- **Cancer Diagnosis Classification Project** <br> Built SVM and Logistic Regression models on the Breast Cancer Wisconsin dataset to classify tumors as malignant or benign. Evaluated with cross‑validation and standard metrics, achieving 90%+ accuracy. Implemented a clean data pipeline using pandas and scikit‑learn. <a href="https://github.com/venkateshterikuti/Cancer-Diagnosis-Classification-Project" target="_blank" rel="noopener">View on GitHub</a>
 
 
-- **High energy physics and graph neural networks** <br> Studying applications of Graph Neural Networks to high energy physics, as a part of the [MUCCA project](https://l.infn.it/mucca-project) in collaboration with the University of Liverpool and CERN.
+- **Optimize Pathfinding in Dynamic Mazes** <br> Implemented DQN and baseline Q‑Learning for maze navigation in a Python simulation. DQN improved path efficiency by ~30% over BQN and reduced steps by ~25% across complexities. Demonstrates RL techniques for dynamic pathfinding. <a href="https://github.com/venkateshterikuti/Optimize-Pathfinding-in-Dynamic-Mazes" target="_blank" rel="noopener">View on GitHub</a>
 
 
-- **Energy grids** <br> I worked with [**ENEL**](https://www.enel.it), Italy's largest energy supplier, and developed a model for object re-identification used to re-identify electrical lines. 
+- **Predicting Customer Churn in E-Commerce** <br> Modeled churn for a UK e‑retailer using the Online Retail II dataset. Compared Random Forest, SVM, and XGBoost; SVM (RBF) achieved ~70% CV score with high sensitivity. Feature engineering included TotalPrice and recency metrics. <a href="https://github.com/venkateshterikuti/Predicting-Customer-Churn-in-E-Commerce" target="_blank" rel="noopener">View on GitHub</a>
 
 
-- **Deepers** <br> Member of the [Deepers](https://www.deepers.ai/) community. We aim at teaching Deep Learning to both developers and managers in the indutry, so that they can unlock AI's potential for business. [Here you can find some of the *Deepers* Python tutorials.](https://github.com/alessiodevoto/deepers)
-
-
-- **Cancer Diagnosis Classification Project** <br> A data mining project demonstrating supervised learning techniques on the breast cancer diagnostic dataset. Implemented and compared Support Vector Machine and Logistic Regression models to predict whether tumors are malignant or benign. The project includes comprehensive evaluation metrics, cross-validation, and achieves 90%+ accuracy. Built with Python's scientific ecosystem including pandas, scikit-learn, and matplotlib. [View on GitHub](https://github.com/venkateshterikuti/Cancer-Diagnosis-Classification-Project)
-
-
-- **Optimize Pathfinding in Dynamic Mazes** <br> Developed Deep Q-Network (DQN) and Basic Q-Learning (BQN) algorithms for maze-solving tasks in a Python-simulated environment. Achieved 30% improvement in path efficiency with DQN over BQN in complex mazes and reduced pathfinding steps by 25% across varying maze complexities. Implemented reinforcement learning techniques for dynamic pathfinding optimization, demonstrating advanced AI problem-solving capabilities in navigational challenges. [View on GitHub](https://github.com/venkateshterikuti/Optimize-Pathfinding-in-Dynamic-Mazes)
-
-
-- **Predicting Customer Churn in E-Commerce** <br> Developed machine learning models to identify at-risk customers for a UK-based online retailer using the Online Retail II dataset. Implemented and compared Random Forest, Support Vector Machine (SVM), and XGBoost algorithms, achieving up to 75% sensitivity with XGBoost and 87% sensitivity with linear SVM. Performed comprehensive feature engineering including TotalPrice and Days Since Last Purchase metrics, with cross-validation showing SVM (RBF) achieving the best average score of ~70%. Included detailed analysis with model-specific feature importance and performance evaluation across accuracy, sensitivity, and specificity metrics. [View on GitHub](https://github.com/venkateshterikuti/Predicting-Customer-Churn-in-E-Commerce)
-
-
-- **Casino Intelligence Hub** <br> Advanced casino analytics platform analyzing 16M+ transactions to predict player churn, segment users, and detect anomalies. Built an end-to-end pipeline with PostgreSQL for data warehousing, Python (pandas, scikit-learn, XGBoost) for modeling, and interactive dashboards via Streamlit/Power BI. Includes SQL-heavy feature engineering, automated ETL scripts, and a modular architecture for dashboards and model training. [View on GitHub](https://github.com/venkateshterikuti/casino-intelligence-hub)
+- **Casino Intelligence Hub** <br> End‑to‑end analytics platform on 16M+ transactions for churn prediction, player segmentation, and anomaly detection. PostgreSQL data warehouse, Python ML stack, and Streamlit/Power BI dashboards with automated ETL. <a href="https://github.com/venkateshterikuti/casino-intelligence-hub" target="_blank" rel="noopener">View on GitHub</a>
 
 
 
