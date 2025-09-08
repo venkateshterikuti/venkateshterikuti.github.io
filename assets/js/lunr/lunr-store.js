@@ -176,7 +176,7 @@ var store = [
   {%- if site.lunr.search_within_pages -%}
     {%- assign pages = site.pages | where_exp:'doc','doc.search != false' -%}
     {%- for doc in pages -%}
-      {%- unless doc.permalink == "/activities/" or doc.permalink == "/readings/" -%}
+      {%- unless doc.permalink == "/activities/" or doc.permalink == "/readings/" or doc.permalink == "/blog/" -%}
         {%- if doc.title and doc.title != "" and doc.title != "null" -%}
           {%- if forloop.last -%}
             {%- assign l = true -%}
@@ -214,6 +214,4 @@ var store = [
       {%- endunless -%}
     {%- endfor -%}
   {%- endif -%}
-  {%- comment -%} Remove trailing comma {%- endcomment -%}
-  {}
 ]
