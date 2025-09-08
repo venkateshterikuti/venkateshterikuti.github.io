@@ -50,31 +50,31 @@ var store = [
   {%- assign activities_page = site.pages | where: "permalink", "/activities/" | first -%}
   {%- if activities_page -%}
     {%- comment -%}
-      New parser: iterate list items robustly. Works with markdown lists rendered to HTML.
+      Parse HTML div structure for individual projects
     {%- endcomment -%}
-    {%- assign segments = activities_page.content | split: '- **' -%}
-    {%- for segment in segments -%}
-      {%- if segment contains '**' -%}
-        {%- assign title_part = segment | split: '**' -%}
-        {%- assign title = title_part[0] | strip -%}
-        {%- assign seg_std = segment | replace:'<br />','<br>' -%}
-        {%- assign after = seg_std | split: '<br>' -%}
-        {%- if after.size > 1 -%}
-          {%- assign raw_desc = after[1] -%}
-        {%- else -%}
-          {%- assign raw_desc = after[0] -%}
-        {%- endif -%}
-        {%- assign desc = raw_desc | strip_html | strip_newlines | strip -%}
-        {%- if title and title != '' and desc and desc != '' -%}
-          {
-            "title": {{ title | jsonify }},
-            "excerpt": {{ desc | jsonify }},
-            "categories": [],
-            "tags": ["projects", "activities"],
-            "url": {{ activities_page.url | relative_url | jsonify }},
-            "teaser": "",
-            "type": "projects"
-          },
+    {%- assign project_divs = activities_page.content | split: '<div class="project-item">' -%}
+    {%- for project_div in project_divs -%}
+      {%- if project_div contains 'project-title' -%}
+        {%- assign title_start = project_div | split: '<div class="project-title">' -%}
+        {%- if title_start.size > 1 -%}
+          {%- assign title_end = title_start[1] | split: '</div>' -%}
+          {%- assign title = title_end[0] | strip -%}
+          {%- assign desc_start = project_div | split: '<div class="project-description">' -%}
+          {%- if desc_start.size > 1 -%}
+            {%- assign desc_end = desc_start[1] | split: '</div>' -%}
+            {%- assign desc = desc_end[0] | strip_html | strip_newlines | strip -%}
+            {%- if title and title != '' and desc and desc != '' -%}
+              {
+                "title": {{ title | jsonify }},
+                "excerpt": {{ desc | jsonify }},
+                "categories": [],
+                "tags": ["projects", "activities"],
+                "url": {{ activities_page.url | relative_url | jsonify }},
+                "teaser": "",
+                "type": "projects"
+              },
+            {%- endif -%}
+          {%- endif -%}
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
