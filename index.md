@@ -17,8 +17,7 @@ Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and ap
 ## Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](/blog/)!
 
-{% assign recent_posts = site.posts | limit: 2 %}
-{% for post in recent_posts %}
+{% for post in site.posts limit:2 %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
   {{ post.excerpt | strip_html | truncatewords: 15 }}
 {% endfor %}
