@@ -27,6 +27,9 @@ toc: false
 - **Predicting Customer Churn in E-Commerce** <br> Developed machine learning models to identify at-risk customers for a UK-based online retailer using the Online Retail II dataset. Implemented and compared Random Forest, Support Vector Machine (SVM), and XGBoost algorithms, achieving up to 75% sensitivity with XGBoost and 87% sensitivity with linear SVM. Performed comprehensive feature engineering including TotalPrice and Days Since Last Purchase metrics, with cross-validation showing SVM (RBF) achieving the best average score of ~70%. Included detailed analysis with model-specific feature importance and performance evaluation across accuracy, sensitivity, and specificity metrics. [View on GitHub](https://github.com/venkateshterikuti/Predicting-Customer-Churn-in-E-Commerce)
 
 
+- **Casino Intelligence Hub** <br> Advanced casino analytics platform analyzing 16M+ transactions to predict player churn, segment users, and detect anomalies. Built an end-to-end pipeline with PostgreSQL for data warehousing, Python (pandas, scikit-learn, XGBoost) for modeling, and interactive dashboards via Streamlit/Power BI. Includes SQL-heavy feature engineering, automated ETL scripts, and a modular architecture for dashboards and model training. [View on GitHub](https://github.com/venkateshterikuti/casino-intelligence-hub)
+
+
 
 
 
