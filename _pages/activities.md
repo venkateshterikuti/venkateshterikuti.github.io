@@ -21,6 +21,9 @@ toc: false
 - **Cancer Diagnosis Classification Project** <br> A data mining project demonstrating supervised learning techniques on the breast cancer diagnostic dataset. Implemented and compared Support Vector Machine and Logistic Regression models to predict whether tumors are malignant or benign. The project includes comprehensive evaluation metrics, cross-validation, and achieves 90%+ accuracy. Built with Python's scientific ecosystem including pandas, scikit-learn, and matplotlib. [View on GitHub](https://github.com/venkateshterikuti/Cancer-Diagnosis-Classification-Project)
 
 
+- **[Optimize Pathfinding in Dynamic Mazes](https://github.com/venkateshterikuti/Optimize-Pathfinding-in-Dynamic-Mazes)** <br> Developed Deep Q-Network (DQN) and Basic Q-Learning (BQN) algorithms for maze-solving tasks in a Python-simulated environment. Achieved 30% improvement in path efficiency with DQN over BQN in complex mazes and reduced pathfinding steps by 25% across varying maze complexities. Implemented reinforcement learning techniques for dynamic pathfinding optimization, demonstrating advanced AI problem-solving capabilities in navigational challenges.
+
+
 
 
 
