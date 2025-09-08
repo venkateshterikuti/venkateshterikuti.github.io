@@ -50,19 +50,18 @@ var store = [
   {%- assign activities_page = site.pages | where: "permalink", "/activities/" | first -%}
   {%- if activities_page -%}
     {%- comment -%}
-      Parse HTML div structure for individual projects
+      Parse markdown list format for individual projects
     {%- endcomment -%}
-    {%- assign project_divs = activities_page.content | split: '<div class="project-item">' -%}
-    {%- for project_div in project_divs -%}
-      {%- if project_div contains 'project-title' -%}
-        {%- assign title_start = project_div | split: '<div class="project-title">' -%}
-        {%- if title_start.size > 1 -%}
-          {%- assign title_end = title_start[1] | split: '</div>' -%}
-          {%- assign title = title_end[0] | strip -%}
-          {%- assign desc_start = project_div | split: '<div class="project-description">' -%}
-          {%- if desc_start.size > 1 -%}
-            {%- assign desc_end = desc_start[1] | split: '</div>' -%}
-            {%- assign desc = desc_end[0] | strip_html | strip_newlines | strip -%}
+    {%- assign project_items = activities_page.content | split: '- **' -%}
+    {%- for item in project_items -%}
+      {%- if item contains '**' and item contains '<br>' -%}
+        {%- assign title_parts = item | split: '**' -%}
+        {%- if title_parts.size > 1 -%}
+          {%- assign title = title_parts[0] | strip -%}
+          {%- assign content_after_title = title_parts[1] -%}
+          {%- assign desc_parts = content_after_title | split: '<br>' -%}
+          {%- if desc_parts.size > 1 -%}
+            {%- assign desc = desc_parts[1] | strip_html | strip_newlines | strip -%}
             {%- if title and title != '' and desc and desc != '' -%}
               {
                 "title": {{ title | jsonify }},
