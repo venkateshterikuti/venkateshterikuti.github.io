@@ -25,7 +25,7 @@ url                      : "https://venkateshterikuti.github.io"
 baseurl                  : # "/"
 repository               : "venkateshterikuti/venkateshterikuti.github.io"
 teaser                   : #/assets/images/fadingblue.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png" (immagine di default per i post)
-logo                     : #/assets/images/fadingblue.jpg # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/favs/favicon-32x32.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Venkatesh Terikuti" #overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 210
@@ -86,7 +86,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/bulb.png
+og_image                 : /assets/images/og-image.png
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -110,18 +110,30 @@ author:
   location         : "San Jose, California, United States"
   email            : 
   links:
-    - label: "X"
-      icon: "fab fa-fw fa-square-x-twitter" 
-      url: "https://x.com/arundeep_T"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/venkateshterikuti"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:vterikuti@gmail.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
       url: "https://www.linkedin.com/in/terikuti/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/venkateshterikuti"
+    - label: "X"
+      icon: "fab fa-fw fa-square-x-twitter" 
+      url: "https://x.com/arundeep_T"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0000-0000-0000"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=YOUR_ID"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Venkatesh-Terikuti"
+    - label: "Kaggle"
+      icon: "fab fa-fw fa-kaggle"
+      url: "https://www.kaggle.com/venkateshterikuti"
 
     #- label: "Facebook"
       #icon: "fab fa-fw fa-facebook-square"
