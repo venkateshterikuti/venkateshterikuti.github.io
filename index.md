@@ -18,7 +18,7 @@ Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and ap
 📝 I share notes, code snippets, and write‑ups — [take a look](/blog/)!
 
 ### Recent Posts
-{% assign recent_posts = site.posts | limit: 3 %}
+{% assign recent_posts = site.posts | limit: 2 %}
 {% for post in recent_posts %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
   {{ post.excerpt | strip_html | truncatewords: 15 }}
@@ -28,15 +28,13 @@ Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and ap
 
 ## Projects
 
-### Pinned Projects
-<!-- Add pinned="true" to any project in _data/projects.yml or directly here -->
 - **Customer Churn Prediction for Telecom** — `Machine Learning` `Data Science`  
   Built ensemble models achieving 94% accuracy in predicting customer churn. Implemented feature engineering pipeline and deployed REST API for real-time predictions.
 
 - **Graph Neural Networks for High Energy Physics** — `Deep Learning` `Research`  
   Applied GNN architectures to particle physics data analysis. Collaborated with CERN researchers to improve event classification accuracy by 15%.
 
-### Currently Working On
+### In Progress
 - **LLM-Powered Code Review Assistant** — `LLM` `MLOps`  
   Building an intelligent code review system using fine-tuned language models. Integrating with GitHub Actions for automated PR analysis.
 

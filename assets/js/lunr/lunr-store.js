@@ -6,43 +6,45 @@ var store = [
   {%- comment -%} First: Blog posts from _posts {%- endcomment -%}
   {%- assign posts = site.posts | where_exp:'doc','doc.search != false' -%}
   {%- for doc in posts -%}
-    {%- if doc.header.teaser -%}
-      {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
-    {%- else -%}
-      {%- assign teaser = site.teaser -%}
+    {%- if doc.title and doc.title != "" -%}
+      {%- if doc.header.teaser -%}
+        {%- capture teaser -%}{{ doc.header.teaser }}{%- endcapture -%}
+      {%- else -%}
+        {%- assign teaser = site.teaser -%}
+      {%- endif -%}
+      {
+        "title": {{ doc.title | jsonify }},
+        "excerpt":
+          {%- if site.search_full_content == true -%}
+            {{ doc.content | newline_to_br |
+              replace:"<br />", " " |
+              replace:"</p>", " " |
+              replace:"</h1>", " " |
+              replace:"</h2>", " " |
+              replace:"</h3>", " " |
+              replace:"</h4>", " " |
+              replace:"</h5>", " " |
+              replace:"</h6>", " "|
+            strip_html | strip_newlines | jsonify }},
+          {%- else -%}
+            {{ doc.content | newline_to_br |
+              replace:"<br />", " " |
+              replace:"</p>", " " |
+              replace:"</h1>", " " |
+              replace:"</h2>", " " |
+              replace:"</h3>", " " |
+              replace:"</h4>", " " |
+              replace:"</h5>", " " |
+              replace:"</h6>", " "|
+            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
+          {%- endif -%}
+        "categories": {{ doc.categories | jsonify }},
+        "tags": {{ doc.tags | jsonify }},
+        "url": {{ doc.url | relative_url | jsonify }},
+        "teaser": {{ teaser | relative_url | jsonify }},
+        "type": "blog"
+      },
     {%- endif -%}
-    {
-      "title": {{ doc.title | jsonify }},
-      "excerpt":
-        {%- if site.search_full_content == true -%}
-          {{ doc.content | newline_to_br |
-            replace:"<br />", " " |
-            replace:"</p>", " " |
-            replace:"</h1>", " " |
-            replace:"</h2>", " " |
-            replace:"</h3>", " " |
-            replace:"</h4>", " " |
-            replace:"</h5>", " " |
-            replace:"</h6>", " "|
-          strip_html | strip_newlines | jsonify }},
-        {%- else -%}
-          {{ doc.content | newline_to_br |
-            replace:"<br />", " " |
-            replace:"</p>", " " |
-            replace:"</h1>", " " |
-            replace:"</h2>", " " |
-            replace:"</h3>", " " |
-            replace:"</h4>", " " |
-            replace:"</h5>", " " |
-            replace:"</h6>", " "|
-          strip_html | strip_newlines | truncatewords: 50 | jsonify }},
-        {%- endif -%}
-      "categories": {{ doc.categories | jsonify }},
-      "tags": {{ doc.tags | jsonify }},
-      "url": {{ doc.url | relative_url | jsonify }},
-      "teaser": {{ teaser | relative_url | jsonify }},
-      "type": "blog"
-    },
   {%- endfor -%}
   {%- comment -%} Second: Individual Projects from activities page {%- endcomment -%}
   {%- assign activities_page = site.pages | where: "permalink", "/activities/" | first -%}
@@ -54,15 +56,17 @@ var store = [
         {%- if project_parts.size > 1 -%}
           {%- assign project_title = project_parts[0] | strip -%}
           {%- assign project_desc = project_parts[1] | strip -%}
-          {
-            "title": {{ project_title | jsonify }},
-            "excerpt": {{ project_desc | strip_html | strip_newlines | jsonify }},
-            "categories": [],
-            "tags": ["projects", "activities"],
-            "url": {{ activities_page.url | relative_url | jsonify }},
-            "teaser": "",
-            "type": "projects"
-          },
+          {%- if project_title and project_title != "" -%}
+            {
+              "title": {{ project_title | jsonify }},
+              "excerpt": {{ project_desc | strip_html | strip_newlines | jsonify }},
+              "categories": [],
+              "tags": ["projects", "activities"],
+              "url": {{ activities_page.url | relative_url | jsonify }},
+              "teaser": "",
+              "type": "projects"
+            },
+          {%- endif -%}
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
@@ -96,15 +100,17 @@ var store = [
             {%- if paper_tags_start.size > 1 -%}
               {%- assign paper_tags_end = paper_tags_start[1] | split: '"' -%}
               {%- assign paper_tags = paper_tags_end[0] | split: ',' -%}
-              {
-                "title": {{ paper_title | jsonify }},
-                "excerpt": {{ paper_summary | jsonify }},
-                "categories": [],
-                "tags": {{ paper_tags | jsonify }},
-                "url": {{ readings_page.url | relative_url | jsonify }},
-                "teaser": "",
-                "type": "readings"
-              },
+              {%- if paper_title and paper_title != "" and paper_summary and paper_summary != "" -%}
+                {
+                  "title": {{ paper_title | jsonify }},
+                  "excerpt": {{ paper_summary | jsonify }},
+                  "categories": [],
+                  "tags": {{ paper_tags | jsonify }},
+                  "url": {{ readings_page.url | relative_url | jsonify }},
+                  "teaser": "",
+                  "type": "readings"
+                },
+              {%- endif -%}
             {%- endif -%}
           {%- endif -%}
         {%- endif -%}
