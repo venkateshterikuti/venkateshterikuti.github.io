@@ -4,10 +4,10 @@ author_profile: true
 title: First Machine Learning Task with Python
 seo_title: Colab Notebook showing how to use scikit learn and other simple libraries for a classification task.
 tags:
-	- notebook
-	- tutorial
-	- pandas
-	- colab
+  - notebook
+  - tutorial
+  - pandas
+  - colab
 
 published: true
 ---

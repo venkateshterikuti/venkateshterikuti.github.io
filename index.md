@@ -17,10 +17,11 @@ Hi, I'm Venkatesh Terikuti. I work across data science, machine learning, and ap
 ## Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](/blog/)!
 
-{% assign visible_posts = site.posts | where_exp: "p", "p.title and p.title != '' and p.hidden != true" %}
-{% for post in visible_posts limit:2 %}
+{% for post in site.posts limit:2 %}
+{% if post.title and post.title != "" %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
   {{ post.excerpt | strip_html | truncatewords: 15 }}
+{% endif %}
 {% endfor %}
 
 [View all posts →](/blog/)
