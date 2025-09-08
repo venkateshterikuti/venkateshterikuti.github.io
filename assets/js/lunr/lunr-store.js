@@ -44,9 +44,29 @@ var store = [
       "type": "blog"
     },
   {%- endfor -%}
-  {%- comment -%} Second: Projects page {%- endcomment -%}
+  {%- comment -%} Second: Individual Projects from activities page {%- endcomment -%}
   {%- assign activities_page = site.pages | where: "permalink", "/activities/" | first -%}
   {%- if activities_page -%}
+    {%- assign project_lines = activities_page.content | split: '- **' -%}
+    {%- for project_line in project_lines -%}
+      {%- if project_line contains '**' -%}
+        {%- assign project_parts = project_line | split: '**' -%}
+        {%- if project_parts.size > 1 -%}
+          {%- assign project_title = project_parts[0] | strip -%}
+          {%- assign project_desc = project_parts[1] | strip -%}
+          {
+            "title": {{ project_title | jsonify }},
+            "excerpt": {{ project_desc | strip_html | strip_newlines | jsonify }},
+            "categories": [],
+            "tags": ["projects", "activities"],
+            "url": {{ activities_page.url | relative_url | jsonify }},
+            "teaser": "",
+            "type": "projects"
+          },
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- comment -%} Also include the full page for general searches {%- endcomment -%}
     {
       "title": {{ activities_page.title | jsonify }},
       "excerpt": {{ activities_page.content | strip_html | strip_newlines | truncatewords: 50 | jsonify }},
@@ -57,9 +77,40 @@ var store = [
       "type": "projects"
     },
   {%- endif -%}
-  {%- comment -%} Third: Readings page {%- endcomment -%}
+  {%- comment -%} Third: Individual Papers from readings page {%- endcomment -%}
   {%- assign readings_page = site.pages | where: "permalink", "/readings/" | first -%}
   {%- if readings_page -%}
+    {%- comment -%} Extract individual papers from the readings page {%- endcomment -%}
+    {%- assign paper_sections = readings_page.content | split: '<div class="paper-item"' -%}
+    {%- for paper_section in paper_sections -%}
+      {%- if paper_section contains '<h3>' -%}
+        {%- assign paper_title_start = paper_section | split: '<strong>' -%}
+        {%- if paper_title_start.size > 1 -%}
+          {%- assign paper_title_end = paper_title_start[1] | split: '</strong>' -%}
+          {%- assign paper_title = paper_title_end[0] | strip -%}
+          {%- assign paper_summary_start = paper_section | split: '<strong>Summary:</strong>' -%}
+          {%- if paper_summary_start.size > 1 -%}
+            {%- assign paper_summary_end = paper_summary_start[1] | split: '</p>' -%}
+            {%- assign paper_summary = paper_summary_end[0] | strip_html | strip_newlines -%}
+            {%- assign paper_tags_start = paper_section | split: 'data-tags="' -%}
+            {%- if paper_tags_start.size > 1 -%}
+              {%- assign paper_tags_end = paper_tags_start[1] | split: '"' -%}
+              {%- assign paper_tags = paper_tags_end[0] | split: ',' -%}
+              {
+                "title": {{ paper_title | jsonify }},
+                "excerpt": {{ paper_summary | jsonify }},
+                "categories": [],
+                "tags": {{ paper_tags | jsonify }},
+                "url": {{ readings_page.url | relative_url | jsonify }},
+                "teaser": "",
+                "type": "readings"
+              },
+            {%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- comment -%} Also include the full page for general searches {%- endcomment -%}
     {
       "title": {{ readings_page.title | jsonify }},
       "excerpt": {{ readings_page.content | strip_html | strip_newlines | truncatewords: 100 | jsonify }},
