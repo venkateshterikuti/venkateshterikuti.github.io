@@ -61,7 +61,7 @@ atom_feed:
   hide                   : true #, false (default)
 search                   : true #, false (default)
 search_full_content      : true #, false (default)
-search_provider          : google # (default), algolia, google, lunr
+search_provider          : lunr # (default), algolia, google, lunr
 lunr:
   search_within_pages    : true #, false (default)
 algolia:
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Venkatesh Terikuti"
   avatar           : "/assets/images/vterikuti.jpeg"
-  bio              : "Data Science & Machine Learning <br> LLM applications and visualization"
+  bio              : "Data Scientist & ML Engineer <br> LLM applications and visualization"
   location         : "San Jose, California, United States"
   email            : 
   links:

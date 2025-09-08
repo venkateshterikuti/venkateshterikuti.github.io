@@ -3,10 +3,11 @@ layout: none
 ---
 
 var idx = lunr(function () {
-  this.field('title')
-  this.field('excerpt')
+  this.field('title', { boost: 10 })
+  this.field('excerpt', { boost: 5 })
   this.field('categories')
   this.field('tags')
+  this.field('type')
   this.ref('id')
 
   this.pipeline.remove(lunr.trimmer)
@@ -17,6 +18,7 @@ var idx = lunr(function () {
       excerpt: store[item].excerpt,
       categories: store[item].categories,
       tags: store[item].tags,
+      type: store[item].type,
       id: item
     })
   }
