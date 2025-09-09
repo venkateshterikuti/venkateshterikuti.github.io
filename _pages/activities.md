@@ -5,6 +5,7 @@ seo_title: "Venkatesh Terikuti projects and activities"
 # excerpt: "Things I have been doing lately."
 # last_modified_at: 2022-05-27T11:59:26-04:00
 toc: false
+classes: wide
 ---
 - **Cancer Diagnosis Classification Project** <br> A data mining project demonstrating supervised learning techniques on the breast cancer diagnostic dataset. Implemented and compared Support Vector Machine and Logistic Regression models to predict whether tumors are malignant or benign. The project includes comprehensive evaluation metrics, cross-validation, and achieves 90%+ accuracy. Built with Python's scientific ecosystem including pandas, scikit-learn, and matplotlib. <a href="https://github.com/venkateshterikuti/Cancer-Diagnosis-Classification-Project" target="_blank" rel="noopener">View on GitHub</a>
 
