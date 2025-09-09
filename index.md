@@ -14,11 +14,9 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 
 👋 I'm Venkatesh Terikuti, a Senior Data Scientist & Machine Learning Engineer with 6+ years building ML systems that scale to millions of users. Starting my career as a Data Analyst, I've evolved into specializing in production ML systems. Currently pursuing applied AI research at University of Arizona, focusing on LLM-powered semantic search and conversational AI.
 
-🚀 I specialize in taking models from research to production—whether it's deploying real-time anomaly detection for 6M+ daily events, building MLOps platforms that serve 10+ models, or fine-tuning transformers for 90% better search precision. I've led distributed teams across three continents and authored research submitted to CIKM conference.
+🚀 I specialize in taking models from research to production—whether it's deploying real-time anomaly detection for 6M+ daily events, building MLOps platforms that serve 10+ models, or fine-tuning transformers for 90% better search precision. I've led distributed teams across three continents and authored a research paper submitted to CIKM conference.
 
 **⚡ What excites me:** The intersection of cutting-edge AI research and scalable engineering solutions that drive real business impact.
-
-📄 View my CV [here](/assets/docs/vterikuti.pdf).
 
 ## Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](/blog/)!
