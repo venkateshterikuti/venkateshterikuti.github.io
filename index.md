@@ -33,13 +33,10 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 ## Projects
 
 - **Building LLM From Scratch** — `Deep Learning` `LLM` `PyTorch`  
-  Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning.
+  Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener">View on GitHub</a>
 
-- **Customer Churn Prediction for Telecom** — `Machine Learning` `Data Science`  
-  Built ensemble models achieving 94% accuracy in predicting customer churn. Implemented feature engineering pipeline and deployed REST API for real-time predictions.
-
-- **Graph Neural Networks for High Energy Physics** — `Deep Learning` `Research`  
-  Applied GNN architectures to particle physics data analysis. Collaborated with CERN researchers to improve event classification accuracy by 15%.
+- **Casino Intelligence Hub** — `Data Science` `Analytics` `MLOps`  
+  Advanced casino analytics platform analyzing 16M+ transactions to predict player churn, segment users, and detect anomalies. Built end-to-end pipeline with PostgreSQL, Python ML stack, and interactive dashboards. <a href="https://github.com/venkateshterikuti/casino-intelligence-hub" target="_blank" rel="noopener">View on GitHub</a>
 
 ### In Progress
 - **LLM-Powered Code Review Assistant** — `LLM` `MLOps`  
