@@ -2,12 +2,12 @@
 layout: single
 classes: wide
 author_profile: true
-title: "Building My First LLM From Scratch: A Masters Graduate's Journey"
+title: "Building My First LLM From Scratch"
 seo_title: "Building an LLM from scratch - GPT implementation with PyTorch, attention mechanisms, and instruction finetuning"
 published: true
 ---
 
-I didn't set out to build the biggest model—I set out to understand one. This project became my lab notebook: the decisions I made, the experiments that failed, and the quiet moments where things started to work. By the end, I had a small but capable language model that could read raw text, generate sequences, classify examples, and follow instructions. More importantly, I developed the practical instincts to debug, evaluate, and iterate on modern LLM systems.
+TL;DR: I didn’t try to build the biggest model—I set out to understand one end‑to‑end. This post is the lab notebook of that journey: the design choices, the checks that saved me hours, and the small wins that stacked into a useful, instructable language model.
 
 ---
 
@@ -54,9 +54,9 @@ class NextTokenDataset:
 
 ![Input processing workflow: raw text → encode → tokens → x/y shift](/assets/images/llm-blog/input-processing-workflow.jpg)
 
-Why this matters for teams:
-- Demonstrates data rigor and awareness of edge cases (padding, off-by-one, reproducibility).
-- Shows comfort translating product text into training-ready tensors.
+What this taught me:
+- Data rigor prevents silent failures (padding, off‑by‑one, reproducibility).
+- Translating product text into training‑ready tensors is half the battle.
 
 ---
 
@@ -86,7 +86,7 @@ Multi-head attention:
 - Multiple heads attend to different patterns (syntax, long-range dependencies, entities).
 - Heads are concatenated and projected back to the model dimension.
 
-What I verified:
+Quick validations:
 - Weights sum to 1 across the last axis.
 - Causal mask zeros out upper-triangular positions before softmax.
 - Outputs change sensibly when inputs change.
@@ -147,7 +147,7 @@ Qualitative checks:
 
 ![Pretraining loop overview](/assets/images/llm-blog/pretraining-loop-overview.jpg)
 
-[Loss curve (PDF)](/assets/images/llm-blog/loss-plot.pdf)
+![Loss curve](/assets/images/llm-blog/loss-plot.jpg)
 
 ---
 
@@ -161,7 +161,7 @@ Approach:
 Pitfalls and fixes:
 - Padding leakage: ensure attention masks or valid-token pooling to avoid contaminating the representation.
 - Learning rate strategy: higher LR on the head, lower on the backbone, or freeze the backbone initially.
-- Overfit a tiny subset (e.g., 50 examples) to validate the setup can learn.
+- Can it overfit 50 examples? If yes, your setup probably works.
 
 Evaluation:
 - Track accuracy and F1.
@@ -174,9 +174,7 @@ Evaluation:
 ## Instruction Finetuning (SFT): Teaching the Model to Be Helpful
 
 Data:
-- Instruction–response pairs with a consistent prompt template, e.g.:
-  - Instruction:
-  - Response:
+- Instruction–response pairs with a consistent prompt template.
 
 Loss masking:
 - Concatenate the formatted text; compute loss only on response tokens.
@@ -186,7 +184,7 @@ Generation:
 - Use temperature and top-k/top-p sampling to improve diversity and reduce repetition.
 - Fix the prompt template for comparability across checkpoints.
 
-[Temperature vs. diversity (PDF)](/assets/images/llm-blog/temperature-plot.pdf)
+![Temperature vs. diversity](/assets/images/llm-blog/temperature-plot.jpg)
 
 Lightweight evaluation:
 - A small set of instructions with reference answers.
@@ -196,7 +194,7 @@ Lightweight evaluation:
 
 ---
 
-## Engineering Habits That Paid Off
+## Practical Engineering Practices (that saved me hours)
 
 - Determinism: fixed seeds and deterministic splits ensured apples-to-apples comparisons.
 - Tiny asserts everywhere: shape checks and off-by-one checks saved hours.
@@ -251,8 +249,8 @@ def generate(model, idx, max_new_tokens, block_size):
 ## Results, Demos, and What I'd Build Next
 
 Results highlights:
-- The pretrained model generates coherent, on-topic text for short prompts.
-- The classification head reaches competitive accuracy on small benchmarks after light tuning.
+- Pretrained model generates coherent, on-topic text for short prompts.
+- Classification head reaches competitive accuracy on small benchmarks after light tuning.
 - Instruction finetuning yields noticeably more helpful and structured answers under a consistent prompt.
 
 ![Next token prediction example](/assets/images/llm-blog/next-token-generation.jpg)
@@ -266,6 +264,6 @@ Next steps for scale and production:
 
 ---
 
-Thank you for reading—happy to share the code and notebooks on request.
+Thank you for reading! You can find the complete code and notebooks for this project on GitHub: **[llm-from-scratch](https://github.com/venkateshterikuti/llm-from-scratch)**
 
 ---
