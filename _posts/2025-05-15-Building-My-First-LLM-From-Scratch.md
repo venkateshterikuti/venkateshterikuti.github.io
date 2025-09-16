@@ -266,4 +266,6 @@ Next steps for scale and production:
 
 Thank you for reading! You can find the complete code and notebooks for this project on GitHub: **[llm-from-scratch](https://github.com/venkateshterikuti/llm-from-scratch)**
 
+This project was inspired by Sebastian Raschka's book "Build a Large Language Model (From Scratch)", which provided invaluable guidance during the journey.
+
 ---
