@@ -19,6 +19,9 @@ classes: wide
 - **Casino Intelligence Hub** <br> Advanced casino analytics platform analyzing 16M+ transactions to predict player churn, segment users, and detect anomalies. Built an end-to-end pipeline with PostgreSQL for data warehousing, Python (pandas, scikit-learn, XGBoost) for modeling, and interactive dashboards via Streamlit/Power BI. Includes SQL-heavy feature engineering, automated ETL scripts, and a modular architecture for dashboards and model training. <a href="https://github.com/venkateshterikuti/casino-intelligence-hub" target="_blank" rel="noopener">View on GitHub</a>
 
 
+- **Building LLM From Scratch** <br> Complete implementation of a GPT-style large language model from the ground up using PyTorch. Built a byte-level tokenizer, scaled dot-product attention with causal masking, transformer blocks, and training pipelines. Includes pretraining on unlabeled text, classification finetuning, and instruction finetuning (SFT). Demonstrates deep understanding of attention mechanisms, gradient stabilization, and modern LLM architectures. Inspired by Sebastian Raschka's book. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener">View on GitHub</a>
+
+
 
 
 

@@ -32,6 +32,9 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 
 ## Projects
 
+- **Building LLM From Scratch** — `Deep Learning` `LLM` `PyTorch`  
+  Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning.
+
 - **Customer Churn Prediction for Telecom** — `Machine Learning` `Data Science`  
   Built ensemble models achieving 94% accuracy in predicting customer churn. Implemented feature engineering pipeline and deployed REST API for real-time predictions.
 
