@@ -32,6 +32,9 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 
 ## Projects
 
+- **Sliding-Window Attention From Scratch** — `Deep Learning` `Transformers` `PyTorch`  
+  Efficient attention mechanism implementation that reduces computational complexity from O(N²) to O(N·W). Built vectorized kernel, comprehensive benchmarking framework, and trained character-level language models. Includes Metal (MPS) acceleration for Apple Silicon and detailed performance analysis. <a href="https://github.com/venkateshterikuti/sliding-window-attention" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+
 - **Building LLM From Scratch** — `Deep Learning` `LLM` `PyTorch`  
   Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
 
