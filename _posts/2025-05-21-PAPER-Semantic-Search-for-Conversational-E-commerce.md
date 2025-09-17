@@ -10,6 +10,48 @@ pinned: true
 
 TL;DR: Shoppers increasingly type full sentences ("show me a green iPhone 14 Pro case between $15–$20 with great reviews") instead of keyword salads. We built a two-stage search system that understands conversational queries and retrieves the right products from a 1.3M-item Amazon dataset. Our approach combines fine-tuned sentence encoders with structured constraint extraction, achieving P@1 = 0.80 and R@100 = 0.81 on a challenging benchmark—substantially ahead of baselines.
 
+## System Overview
+
+```mermaid
+graph TD
+    A[Conversational Query<br/>"Best inexpensive folio case for Samsung S22 Plus"] --> B[Parallel Processing]
+    
+    B --> C[Stage 1: Semantic Retrieval<br/>Fine-tuned MiniLM Encoder]
+    B --> D[Stage 2: Constraint Extraction<br/>Fine-tuned Flan-T5-small]
+    
+    C --> E[Vector Similarity Search<br/>FAISS Index]
+    D --> F[Structured Filters<br/>Price, Rating, Category]
+    
+    E --> G[Top-K Candidates<br/>~1000 products]
+    F --> H[Extracted Constraints<br/>inexpensive, folio, S22 Plus]
+    
+    G --> I[Apply Filters]
+    H --> I
+    
+    I --> J[Final Ranked Results<br/>Semantic + Constraint Match]
+    
+    style A fill:#e1f5fe
+    style J fill:#c8e6c9
+    style C fill:#fff3e0
+    style D fill:#fff3e0
+    style I fill:#fce4ec
+```
+
+**Training Pipeline:**
+```mermaid
+graph LR
+    K[Amazon Product Catalog<br/>1.3M items] --> L[LLM Synthetic Query Generation<br/>6.5M query-product pairs]
+    L --> M[Fine-tune Sentence Encoder<br/>MiniLM on query-product similarity]
+    L --> N[Fine-tune Constraint Extractor<br/>Flan-T5 on query→filters]
+    
+    M --> O[Production System]
+    N --> O
+    
+    style K fill:#e8f5e8
+    style L fill:#fff3e0
+    style O fill:#c8e6c9
+```
+
 *Note: This paper is currently under review at CIKM 2025. The full paper will be made available once published.*
 
 ---
