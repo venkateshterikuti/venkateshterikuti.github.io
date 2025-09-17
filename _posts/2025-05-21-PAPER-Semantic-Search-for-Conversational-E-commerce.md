@@ -12,7 +12,7 @@ TL;DR: Shoppers increasingly type full sentences ("show me a green iPhone 14 Pro
 
 ## System Overview
 
-```mermaid
+<pre class="mermaid">
 graph TD
     A[Conversational Query<br/>"Best inexpensive folio case for Samsung S22 Plus"] --> B[Parallel Processing]
     
@@ -35,10 +35,10 @@ graph TD
     style C fill:#fff3e0
     style D fill:#fff3e0
     style I fill:#fce4ec
-```
+</pre>
 
 **Training Pipeline:**
-```mermaid
+<pre class="mermaid">
 graph LR
     K[Amazon Product Catalog<br/>1.3M items] --> L[LLM Synthetic Query Generation<br/>6.5M query-product pairs]
     L --> M[Fine-tune Sentence Encoder<br/>MiniLM on query-product similarity]
@@ -50,7 +50,7 @@ graph LR
     style K fill:#e8f5e8
     style L fill:#fff3e0
     style O fill:#c8e6c9
-```
+</pre>
 
 *Note: This paper is currently under review at CIKM 2025. The full paper will be made available once published.*
 
