@@ -52,6 +52,8 @@ This reduces the attention matrix from N×N to N×W, achieving linear scaling in
 
 ![Transformer blocks showing fixed vs sliding window](/assets/images/swa-blog/Two-consecutive-transformer-blocks-the-left-is-a-fixed-window-the-right-is-a-sliding.png)
 
+*Two consecutive transformer blocks: the left uses fixed/full attention where each token can attend to all previous tokens, while the right uses sliding-window attention where each token only attends to tokens within a limited window. This architectural change reduces computational complexity from O(N²) to O(N·W).*
+
 ---
 
 ## Building the Sliding-Window Kernel: Getting the Indices Right
@@ -136,9 +138,16 @@ python scripts/benchmark.py \
 
 The results tell a compelling story:
 
-![Tokens per second comparison](/assets/images/swa-blog/swattn_tokens_per_s.png)
-
-![Speedup comparison](/assets/images/swa-blog/swattn_speedup.png)
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1;">
+    <img src="/assets/images/swa-blog/swattn_tokens_per_s.png" alt="Tokens per second comparison" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">Tokens processed per second across different sequence lengths</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/swa-blog/swattn_speedup.png" alt="Speedup comparison" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">SWA speedup relative to full attention</p>
+  </div>
+</div>
 
 **Key findings:**
 - **Short sequences (≤256 tokens)**: Full attention wins due to its simpler implementation
@@ -193,8 +202,6 @@ While the words are garbled (character-level modeling is challenging), the model
 - Sentence rhythm and spacing
 - English-like character combinations
 
-![Training and sampling results](/assets/images/swa-blog/the_verdict_train and verdict_sample.png)
-
 ---
 
 ## Scaling Up: Handling Larger Corpora
@@ -235,7 +242,7 @@ def get_device():
 ```
 
 Performance observations:
-- **MacBook Air M2**: Comfortably handles 512-token sequences with SWA
+- **MacBook Air M3**: Comfortably handles 512-token sequences with SWA
 - **Memory efficiency**: No thermal throttling during training
 - **Batch processing**: 12-24 samples per batch without issues
 
