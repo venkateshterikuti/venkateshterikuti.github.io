@@ -21,9 +21,19 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 ## Blog 
 📝 I maintain a small blog where I share code tutorials and insights on various deep learning topics, feel free to [take a look](/blog/)!
 
-{% for post in site.posts limit:2 %}
+{% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" %}
+{% assign pinned_posts = site.posts | where: "pinned", true %}
+
+{% for post in regular_posts limit:1 %}
 {% if post.title and post.title != "" %}
 - [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
+  {{ post.excerpt | strip_html | truncatewords: 15 }}
+{% endif %}
+{% endfor %}
+
+{% for post in pinned_posts limit:1 %}
+{% if post.title and post.title != "" %}
+- [📌 {{ post.title }}]({{ post.url }}) — {{ post.date | date: "%B %Y" }}  
   {{ post.excerpt | strip_html | truncatewords: 15 }}
 {% endif %}
 {% endfor %}

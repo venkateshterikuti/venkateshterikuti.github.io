@@ -7,8 +7,36 @@ layout: archive
 
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign pinned_posts = site.posts | where: "pinned", true %}
+{% assign regular_posts = site.posts | where_exp: "post", "post.pinned != true" %}
+
 <div class="entries-{{ entries_layout }}">
-  {% for post in site.posts %}
+  <!-- Pinned Posts First -->
+  {% for post in pinned_posts %}
+    {% unless post.hidden %}
+      {% if post.title and post.date and post.content != "" %}
+        <div class="archive__item pinned-post">
+          <h2 class="archive__item-title">
+            <span class="pinned-badge">📌 PINNED</span>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h2>
+          {% assign words = post.content | number_of_words %}
+          {% assign reading_time = words | divided_by: 180 | plus: 1 %}
+          <span class="post-meta">
+            {{ post.date | date: "%B %d, %Y" }} • {{ reading_time }} min read
+          </span>
+          {% if post.excerpt %}
+            <p class="archive__item-excerpt">
+              {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+  
+  <!-- Regular Posts -->
+  {% for post in regular_posts %}
     {% unless post.hidden %}
       {% if post.title and post.date and post.content != "" %}
         <div class="archive__item">

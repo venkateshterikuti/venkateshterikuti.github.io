@@ -5,6 +5,7 @@ author_profile: true
 title: "PAPER: Semantic Search for Conversational E-commerce (CIKM 2025, Under Review)"
 seo_title: "Semantic search for conversational e-commerce - two-stage retrieval system with fine-tuned encoders and constraint extraction"
 published: true
+pinned: true
 ---
 
 TL;DR: Shoppers increasingly type full sentences ("show me a green iPhone 14 Pro case between $15–$20 with great reviews") instead of keyword salads. We built a two-stage search system that understands conversational queries and retrieves the right products from a 1.3M-item Amazon dataset. Our approach combines fine-tuned sentence encoders with structured constraint extraction, achieving P@1 = 0.80 and R@100 = 0.81 on a challenging benchmark—substantially ahead of baselines.
