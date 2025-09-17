@@ -10,3 +10,22 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="/browserconfig.xml">
+
+<!-- Mermaid Support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        primaryColor: '#007acc',
+        primaryTextColor: '#333',
+        primaryBorderColor: '#007acc',
+        lineColor: '#666',
+        secondaryColor: '#f8f9ff',
+        tertiaryColor: '#ffffff'
+      }
+    });
+  });
+</script>
