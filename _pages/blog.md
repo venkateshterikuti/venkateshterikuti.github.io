@@ -40,4 +40,30 @@ layout: archive
   font-size: 0.85em;
   color: #666;
 }
+
+.pinned-post {
+  border-left: 4px solid #007acc;
+  padding-left: 15px;
+  margin-bottom: 2em;
+  background-color: #f8f9ff;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.pinned-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #007acc, #0056b3);
+  color: white;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-right: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pinned-post .archive__item-title {
+  margin-bottom: 8px;
+}
 </style>
