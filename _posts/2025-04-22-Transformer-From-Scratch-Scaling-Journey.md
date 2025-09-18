@@ -19,8 +19,6 @@ TL;DR: What happens when you build the **same transformer architecture** from sc
 - **Production-ready infrastructure**: Mixed precision, memory mapping, automated benchmarking
 - **Transparent implementation**: Every component built from scratch with explicit `einsum` operations
 
-![Training comparison across scales](/assets/images/transformer/gpu/train_loss.png)
-
 ## Why Scale the Same Architecture?
 
 Instead of comparing different model architectures, I wanted to understand **pure scaling effects**. By keeping the core transformer design constant and scaling parameters, data, and hardware systematically, I could isolate the impact of each scaling dimension.
@@ -127,8 +125,6 @@ python scripts/train.py --device auto --layers 3 --d-model 256 --heads 4 \
 | 3L-512d-4H | **9.5M** | **19,707** | 8 minutes | ~12GB |
 | 4L-256d-4H | **3.2M** | **40,688** | 5 minutes | ~10GB |
 
-![Mini transformer performance scaling](/assets/images/transformer/mac/mini_params_vs_throughput.png)
-
 ### **Training Results: Rapid Convergence**
 
 The Mini Transformer training story:
@@ -137,9 +133,16 @@ The Mini Transformer training story:
 - **Validation Loss**: 1.53 (good generalization)
 - **Perplexity**: exp(1.53) ≈ **4.6** (impressive for character-level)
 
-![Mini transformer training curve](/assets/images/transformer/mac/train_loss.png)
-
-![Training throughput consistency](/assets/images/transformer/mac/train_tokens_per_s.png)
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1;">
+    <img src="/assets/images/transformer/mac/train_loss.png" alt="Mini transformer training curve" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">Mini transformer training curve</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/transformer/mac/train_tokens_per_s.png" alt="Training throughput consistency" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">Training throughput consistency</p>
+  </div>
+</div>
 
 ### **Text Generation: Character-Level Magic**
 
@@ -279,9 +282,16 @@ python gpu_run/train_gpu.py \
 | **Throughput** | 80K tok/s | **255K tok/s** | 3x faster |
 | **Memory Usage** | ~8GB | **60GB** | ~7.5x scaling |
 
-![GPU training dynamics](/assets/images/transformer/gpu/train_loss.png)
-
-![GPU training throughput](/assets/images/transformer/gpu/train_tokens_per_s.png)
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1;">
+    <img src="/assets/images/transformer/gpu/train_loss.png" alt="GPU training dynamics" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">GPU training dynamics</p>
+  </div>
+  <div style="flex: 1;">
+    <img src="/assets/images/transformer/gpu/train_tokens_per_s.png" alt="GPU training throughput" style="width: 100%; height: auto;">
+    <p style="text-align: center; font-style: italic; margin-top: 10px;">GPU training throughput</p>
+  </div>
+</div>
 
 **The Medium Transformer Journey:**
 - **Phase 1 (0-1K steps)**: Rapid descent from 10.58 → 6.0
@@ -354,7 +364,7 @@ python gpu_run/sample_gpu.py --checkpoint checkpoints/gpu_model.pt \
 
 ---
 
-## Engineering Excellence: Production-Ready Infrastructure
+## Production Infrastructure
 
 ### **Automated Benchmarking**
 
@@ -404,14 +414,6 @@ torch.save({
 
 ## Key Insights and Lessons Learned
 
-### **What Works Exceptionally Well**
-
-1. **Pre-norm Architecture**: Superior stability across all scales
-2. **Explicit Einsum Operations**: Clarity without performance cost
-3. **Apple MPS Integration**: Excellent M-series performance  
-4. **Mixed Precision Training**: 2x speedup with minimal quality loss
-5. **Memory-Mapped Datasets**: Seamless large corpus handling
-
 ### **Architecture Decisions Validated**
 
 | Decision | Rationale | Outcome |
@@ -420,15 +422,6 @@ torch.save({
 | **Sinusoidal PE** | Length generalization | ✅ Good extrapolation |
 | **Causal masking** | Autoregressive generation | ✅ Perfect behavior |
 | **Explicit einsum** | Code clarity | ✅ No performance penalty |
-
-### **The Universal Truths**
-
-**Regardless of Scale, These Principles Hold:**
-- ✅ **Transformer fundamentals scale**: Same core design works from 2M to 50M+ parameters
-- ✅ **No black boxes needed**: Explicit operations maintain clarity and performance
-- ✅ **Architecture choice matters**: Pre-norm, causal masking crucial at every scale
-- ✅ **Implementation quality crucial**: Good code and engineering practices scale
-- ✅ **Good code scales**: Clean, modular implementation works across all scales
 
 ---
 
