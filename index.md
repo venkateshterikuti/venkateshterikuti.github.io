@@ -42,6 +42,9 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 
 ## Projects
 
+- **Transformer From Scratch: Scaling Journey** — `Deep Learning` `Transformers` `PyTorch` `Scaling`  
+  Complete transformer implementation scaling from 2.4M to 52M parameters. Built character-level and BPE models, compared MacBook vs H100 training, with comprehensive scaling analysis and production infrastructure. <a href="https://github.com/venkateshterikuti/transformer-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+
 - **Building LLM From Scratch** — `Deep Learning` `LLM` `PyTorch`  
   Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
 

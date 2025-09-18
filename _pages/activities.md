@@ -7,6 +7,8 @@ seo_title: "Venkatesh Terikuti projects and activities"
 toc: false
 classes: wide
 ---
+- **Transformer From Scratch: Scaling Journey** <br> Complete transformer implementation scaling from 2.4M to 52M parameters, exploring the trade-offs between Mini Transformers (MacBook, character-level) and Medium Transformers (H100 GPU, BPE). Built everything from scratch with explicit einsum operations, comparing hardware efficiency, tokenization strategies, and training dynamics. Includes comprehensive scaling analysis, production infrastructure with mixed precision training, memory mapping, and automated benchmarking. Demonstrates mastery of transformer fundamentals across different scales. <a href="https://github.com/venkateshterikuti/transformer-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+
 - **Building LLM From Scratch** <br> Complete implementation of a GPT-style large language model from the ground up using PyTorch. Built a byte-level tokenizer, scaled dot-product attention with causal masking, transformer blocks, and training pipelines. Includes pretraining on unlabeled text, classification finetuning, and instruction finetuning (SFT). Demonstrates deep understanding of attention mechanisms, gradient stabilization, and modern LLM architectures. Inspired by Sebastian Raschka's book. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
 
 
