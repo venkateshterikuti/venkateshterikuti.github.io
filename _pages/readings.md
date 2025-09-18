@@ -85,6 +85,39 @@ A curated collection of papers, articles, and resources that have influenced my 
 </div>
 </div>
 
+<div class="paper-item" data-tags="transformers,attention,optimization,flash-attention">
+<h3><strong>FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</strong> <a href="https://arxiv.org/abs/2205.14135" target="_blank">[Paper]</a></h3>
+<p><strong>Summary:</strong> FlashAttention introduces an IO-aware exact attention algorithm that significantly reduces memory usage and wall-clock time for transformer models. The key innovation is tiling the attention computation to fit within fast on-chip memory (SRAM), reducing the number of memory reads/writes to high-bandwidth memory (HBM). This approach achieves 2-4x speedup and enables training on much longer sequences. FlashAttention combines KV cache optimization with memory-efficient attention computation, making it crucial for scaling transformers to longer contexts while maintaining exact attention semantics.</p>
+<div class="tags">
+<span class="tag" onclick="filterPapers('transformers')">Transformers</span>
+<span class="tag" onclick="filterPapers('attention')">Attention</span>
+<span class="tag" onclick="filterPapers('optimization')">Optimization</span>
+<span class="tag" onclick="filterPapers('flash-attention')">Flash Attention</span>
+</div>
+</div>
+
+<div class="paper-item" data-tags="transformers,attention,efficiency,multi-query">
+<h3><strong>Fast Transformer Decoding: One Write-Head is All You Need</strong> <a href="https://arxiv.org/abs/2305.13245" target="_blank">[Paper]</a></h3>
+<p><strong>Summary:</strong> This paper introduces Multi-Query Attention (MQA), which shares key and value heads across all query heads while maintaining separate query projections. This dramatically reduces the KV cache memory requirements during inference, enabling faster decoding with minimal quality degradation. MQA achieves significant memory savings (up to 32x reduction in KV cache size) and faster inference speeds, especially for long sequences. The technique has been adopted by many production language models including PaLM and is crucial for efficient serving of large language models.</p>
+<div class="tags">
+<span class="tag" onclick="filterPapers('transformers')">Transformers</span>
+<span class="tag" onclick="filterPapers('attention')">Attention</span>
+<span class="tag" onclick="filterPapers('efficiency')">Efficiency</span>
+<span class="tag" onclick="filterPapers('multi-query')">Multi-Query</span>
+</div>
+</div>
+
+<div class="paper-item" data-tags="llm,llama,grouped-query,attention">
+<h3><strong>Llama 2: Open Foundation and Fine-Tuned Chat Models</strong> <a href="https://arxiv.org/abs/2307.09288" target="_blank">[Paper]</a></h3>
+<p><strong>Summary:</strong> The Llama 2 paper introduces Grouped-Query Attention (GQA), which strikes a balance between Multi-Head Attention (MHA) and Multi-Query Attention (MQA). GQA groups query heads and shares key-value heads within each group, reducing KV cache memory requirements while maintaining better quality than pure MQA. This technique provides a configurable trade-off between memory efficiency and model quality. Llama 2's adoption of GQA has influenced many subsequent language models, making it a standard technique for efficient transformer inference.</p>
+<div class="tags">
+<span class="tag" onclick="filterPapers('llm')">LLM</span>
+<span class="tag" onclick="filterPapers('llama')">LLaMA</span>
+<span class="tag" onclick="filterPapers('grouped-query')">Grouped-Query</span>
+<span class="tag" onclick="filterPapers('attention')">Attention</span>
+</div>
+</div>
+
 <div class="paper-item" data-tags="visualization,explainability,distill">
 <h3><strong>Distill.pub</strong> <a href="https://distill.pub/" target="_blank">[Website]</a></h3>
 <p><strong>Summary:</strong> Distill represents a new paradigm in scientific publishing, focusing on clear explanations and interactive visualizations of machine learning concepts. The platform emphasizes visual and interactive elements that help readers build intuition about complex algorithms and mathematical concepts. Articles often include live code, interactive diagrams, and novel visualization techniques that make abstract concepts accessible. Distill has set new standards for how complex technical concepts can be communicated effectively, influencing scientific communication beyond machine learning.</p>
