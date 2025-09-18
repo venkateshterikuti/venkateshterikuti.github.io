@@ -9,7 +9,7 @@ published: true
 
 TL;DR: As a researcher diving into the world of large language models, I've been fascinated by how these models manage to generate text so efficiently. Today, I want to share my exploration of KV Cache - a simple yet powerful optimization that makes transformer inference dramatically faster, providing 10-50x speedup for long sequence generation.
 
-> **Run the code yourself.** The companion notebook `kv_cache_colab.ipynb` lives next to this post. Upload it to [Google Colab](https://colab.research.google.com/) via *File -> Upload notebook* (or host it in your own repo and open it with Colab) to replay every experiment. Each notebook cell already prints the key intermediate values I reference below.
+> **Run the code yourself.** The companion notebook [`kv_cache_colab.ipynb`](https://github.com/venkateshterikuti/notebooks/blob/main/kv_cache_colab.ipynb) is available in my GitHub repository. You can either download it and upload to [Google Colab](https://colab.research.google.com/) via *File -> Upload notebook*, or open it directly in Colab using the GitHub integration to replay every experiment. Each notebook cell already prints the key intermediate values I reference below.
 
 ---
 
