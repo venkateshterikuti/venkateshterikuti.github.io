@@ -50,7 +50,6 @@ model = resnet18()
 
 get_flops(model, (1, 3, 224, 224))
 ```
-I leave the discussion about whther FLOPs are actually a good way of measuring efficiency to [another blog post](https://alessiodevoto.github.io/Efficiency-metrics-in-Machine-Learning/#macs-and-flops)
 
 #### References
 - [pytorch flops counter](https://github.com/pytorch/pytorch/blob/main/torch/utils/flop_counter.py)
