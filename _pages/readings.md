@@ -22,6 +22,36 @@ A curated collection of papers, articles, and resources that have influenced my 
 <p>A new paradigm in scientific publishing, focusing on clear explanations and interactive visualizations of machine learning concepts. Features live code, interactive diagrams, and novel visualization techniques.</p>
 </div>
 
+<div class="paper-item" data-tags="book,llm,deep-learning">
+<h3><i class="fas fa-book"></i> <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank"><strong>Build a Large Language Model (From Scratch)</strong></a></h3>
+<p>Comprehensive guide to building LLMs from the ground up by Sebastian Raschka. Covers tokenization, attention mechanisms, training pipelines, and fine-tuning techniques with hands-on PyTorch implementation.</p>
+</div>
+
+<div class="paper-item" data-tags="youtube,education,neural-networks">
+<h3><i class="fab fa-youtube"></i> <a href="https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=-j5TMHzIkQmwfHQC" target="_blank"><strong>3Blue1Brown - Neural Networks</strong></a></h3>
+<p>Exceptional visual explanations of neural networks, backpropagation, and deep learning concepts. Grant Sanderson's intuitive animations make complex mathematical concepts accessible and engaging.</p>
+</div>
+
+<div class="paper-item" data-tags="youtube,education,ai">
+<h3><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@AndrejKarpathy" target="_blank"><strong>Andrej Karpathy</strong></a></h3>
+<p>Deep learning insights from former OpenAI and Tesla AI director. Features detailed tutorials on building neural networks from scratch, GPT implementations, and AI research discussions.</p>
+</div>
+
+<div class="paper-item" data-tags="youtube,education,visualization">
+<h3><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@WelchLabsVideo" target="_blank"><strong>Welch Labs</strong></a></h3>
+<p>High-quality educational videos on machine learning, neural networks, and data science with excellent visualizations. Known for clear explanations of complex mathematical concepts.</p>
+</div>
+
+<div class="paper-item" data-tags="youtube,education,ai">
+<h3><i class="fab fa-youtube"></i> <a href="https://youtube.com/playlist?list=PLujxSBD-JXglGL3ERdDOhthD3jTlfudC2&si=BF3VL8WSurlE8Mc_" target="_blank"><strong>Two Minute Papers - AI & Deep Learning</strong></a></h3>
+<p>Quick, engaging summaries of latest AI research papers. Károly Zsolnai-Fehér presents cutting-edge developments in computer graphics, machine learning, and AI with enthusiasm and clarity.</p>
+</div>
+
+<div class="paper-item" data-tags="youtube,education,machine-learning">
+<h3><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@krishnaik06" target="_blank"><strong>Krish Naik</strong></a></h3>
+<p>Comprehensive machine learning and data science tutorials covering everything from basics to advanced topics. Practical approach with real-world projects and industry insights.</p>
+</div>
+
 <div class="paper-item" data-tags="llm,llama,grouped-query,attention">
 <h3><i class="fas fa-file-alt"></i> <a href="https://arxiv.org/abs/2307.09288" target="_blank"><strong>Llama 2: Open Foundation and Fine-Tuned Chat Models</strong></a></h3>
 <p>Introduces Grouped-Query Attention (GQA), balancing Multi-Head and Multi-Query Attention. Reduces KV cache memory requirements while maintaining better quality than pure MQA.</p>
