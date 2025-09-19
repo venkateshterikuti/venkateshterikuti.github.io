@@ -314,4 +314,3 @@ details[open] summary::after {
   transform: translateY(-50%) rotate(90deg);
 }
 </style>
-</style>
