@@ -12,30 +12,10 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 ---
 
-## 📚 Publications
-
-<div class="category-container">
-
-<div class="resource-item">
-<h3><i class="fas fa-atom"></i> <a href="https://distill.pub/" target="_blank"><strong>Distill.pub</strong></a></h3>
-<p>Revolutionary scientific publishing platform with interactive visualizations and clear explanations of ML concepts. Features live code and novel visualization techniques.</p>
-</div>
-
-<div class="resource-item">
-<h3><i class="fas fa-university"></i> <a href="https://neurips.cc/" target="_blank"><strong>Neural Information Processing Systems (NeurIPS)</strong></a></h3>
-<p>Premier conference in machine learning and computational neuroscience. Features cutting-edge research across theoretical foundations, algorithms, and applications.</p>
-</div>
-
-</div>
-
-<div class="view-all-link">
-<a href="/readings/publications/">View All Publications →</a>
-</div>
-
----
-
-## 📄 Papers
-
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-file-alt"></i> Papers <span class="item-count">(9 items)</span></h2>
+</summary>
 <div class="category-container">
 
 <div class="resource-item">
@@ -68,11 +48,40 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="view-all-link">
 <a href="/readings/papers/">View All Papers →</a>
 </div>
+</details>
 
----
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-blog"></i> Blogs <span class="item-count">(3 items)</span></h2>
+</summary>
+<div class="category-container">
 
-## 📺 YouTube Channels
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://bclarkson-code.com/posts/llm-from-scratch-scalar-autograd/post.html" target="_blank"><strong>LLM From Scratch: Scalar Autograd</strong></a></h3>
+<p>Comprehensive tutorial building a language model from first principles using scalar automatic differentiation. Provides deep understanding of backpropagation mechanics in neural networks.</p>
+</div>
 
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list" target="_blank"><strong>Qwen Research Blog</strong></a></h3>
+<p>Latest advancements and research insights from the Qwen team. Features technical deep-dives into large language model development and optimization techniques.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-book"></i> <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank"><strong>Build a Large Language Model (From Scratch)</strong></a></h3>
+<p>Comprehensive guide to building LLMs from the ground up by Sebastian Raschka. Covers tokenization, attention mechanisms, training pipelines, and fine-tuning techniques with hands-on PyTorch implementation.</p>
+</div>
+
+</div>
+
+<div class="view-all-link">
+<a href="/readings/blogs/">View All Blogs →</a>
+</div>
+</details>
+
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fab fa-youtube"></i> YouTube <span class="item-count">(5 items)</span></h2>
+</summary>
 <div class="category-container">
 
 <div class="resource-item">
@@ -105,50 +114,35 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="view-all-link">
 <a href="/readings/youtube/">View All YouTube Channels →</a>
 </div>
+</details>
 
----
-
-## 📝 Blogs
-
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-atom"></i> Publications <span class="item-count">(2 items)</span></h2>
+</summary>
 <div class="category-container">
 
 <div class="resource-item">
-<h3><i class="fas fa-blog"></i> <a href="https://bclarkson-code.com/posts/llm-from-scratch-scalar-autograd/post.html" target="_blank"><strong>LLM From Scratch: Scalar Autograd</strong></a></h3>
-<p>Comprehensive tutorial building a language model from first principles using scalar automatic differentiation. Provides deep understanding of backpropagation mechanics in neural networks.</p>
+<h3><i class="fas fa-atom"></i> <a href="https://distill.pub/" target="_blank"><strong>Distill.pub</strong></a></h3>
+<p>Revolutionary scientific publishing platform with interactive visualizations and clear explanations of ML concepts. Features live code and novel visualization techniques.</p>
 </div>
 
 <div class="resource-item">
-<h3><i class="fas fa-blog"></i> <a href="https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list" target="_blank"><strong>Qwen Research Blog</strong></a></h3>
-<p>Latest advancements and research insights from the Qwen team. Features technical deep-dives into large language model development and optimization techniques.</p>
+<h3><i class="fas fa-university"></i> <a href="https://neurips.cc/" target="_blank"><strong>Neural Information Processing Systems (NeurIPS)</strong></a></h3>
+<p>Premier conference in machine learning and computational neuroscience. Features cutting-edge research across theoretical foundations, algorithms, and applications.</p>
 </div>
 
 </div>
 
 <div class="view-all-link">
-<a href="/readings/blogs/">View All Blogs →</a>
+<a href="/readings/publications/">View All Publications →</a>
 </div>
+</details>
 
----
-
-## 📊 Datasets
-
-<div class="category-container">
-
-<div class="resource-item">
-<h3><i class="fas fa-database"></i> <a href="https://huggingface.co/datasets/olewave/OleSpeech-IV-2025-EN-AR-100" target="_blank"><strong>OleSpeech-IV-2025-EN-AR-100</strong></a></h3>
-<p>Large-scale multilingual conversational speech dataset with speaker diarization and transcripts. Features English and Arabic content from podcasts, talk shows, and teleconferences with fine-grained timestamps.</p>
-</div>
-
-</div>
-
-<div class="view-all-link">
-<a href="/readings/datasets/">View All Datasets →</a>
-</div>
-
----
-
-## 🤖 Open Source Models
-
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-robot"></i> Models <span class="item-count">(2 items)</span></h2>
+</summary>
 <div class="category-container">
 
 <div class="resource-item">
@@ -166,27 +160,86 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="view-all-link">
 <a href="/readings/models/">View All Models →</a>
 </div>
+</details>
+
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-database"></i> Datasets <span class="item-count">(1 item)</span></h2>
+</summary>
+<div class="category-container">
+
+<div class="resource-item">
+<h3><i class="fas fa-database"></i> <a href="https://huggingface.co/datasets/olewave/OleSpeech-IV-2025-EN-AR-100" target="_blank"><strong>OleSpeech-IV-2025-EN-AR-100</strong></a></h3>
+<p>Large-scale multilingual conversational speech dataset with speaker diarization and transcripts. Features English and Arabic content from podcasts, talk shows, and teleconferences with fine-grained timestamps.</p>
+</div>
+
+</div>
+
+<div class="view-all-link">
+<a href="/readings/datasets/">View All Datasets →</a>
+</div>
+</details>
 
 ---
 
 <style>
-.category-container {
-  display: grid;
-  gap: 20px;
+.category-section {
   margin-bottom: 20px;
-}
-
-.resource-item {
-  padding: 20px;
   border: 1px solid #e1e4e8;
   border-radius: 8px;
   background: #fafbfc;
 }
 
+.category-header {
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.category-header:hover {
+  background-color: #f1f8ff;
+}
+
+.category-header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #24292e;
+  font-size: 1.4em;
+}
+
+.category-header h2 i {
+  margin-right: 10px;
+  color: #0366d6;
+}
+
+.item-count {
+  font-size: 0.75em;
+  color: #586069;
+  font-weight: normal;
+}
+
+.category-container {
+  padding: 0 20px 20px 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.resource-item {
+  padding: 15px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
 .resource-item h3 {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #24292e;
+  font-size: 1.1em;
 }
 
 .resource-item h3 i {
@@ -196,27 +249,55 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 .resource-item p {
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #586069;
+  font-size: 0.95em;
 }
 
 .view-all-link {
   text-align: center;
-  margin: 20px 0;
+  margin: 15px 0;
+  padding: 0 20px 20px 20px;
 }
 
 .view-all-link a {
   color: #0366d6;
   text-decoration: none;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: 1px solid #0366d6;
   border-radius: 6px;
   transition: all 0.2s ease;
+  font-size: 0.9em;
 }
 
 .view-all-link a:hover {
   background-color: #0366d6;
   color: white;
+}
+
+/* Custom details/summary styling */
+details[open] .category-header {
+  border-bottom: 1px solid #e1e4e8;
+  border-radius: 8px 8px 0 0;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "▶";
+  margin-right: 10px;
+  transition: transform 0.2s ease;
+  font-size: 0.8em;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 </style>
