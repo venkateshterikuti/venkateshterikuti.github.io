@@ -14,7 +14,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-file-alt"></i> Papers <span class="item-count">(9 items)</span></h2>
+<h2><i class="fas fa-file-alt"></i> Papers</h2>
 </summary>
 <div class="category-container">
 
@@ -52,7 +52,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-blog"></i> Blogs <span class="item-count">(3 items)</span></h2>
+<h2><i class="fas fa-blog"></i> Blogs</h2>
 </summary>
 <div class="category-container">
 
@@ -80,7 +80,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fab fa-youtube"></i> YouTube <span class="item-count">(5 items)</span></h2>
+<h2><i class="fab fa-youtube"></i> YouTube</h2>
 </summary>
 <div class="category-container">
 
@@ -118,7 +118,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-atom"></i> Publications <span class="item-count">(2 items)</span></h2>
+<h2><i class="fas fa-atom"></i> Publications</h2>
 </summary>
 <div class="category-container">
 
@@ -141,7 +141,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-robot"></i> Models <span class="item-count">(2 items)</span></h2>
+<h2><i class="fas fa-robot"></i> Models</h2>
 </summary>
 <div class="category-container">
 
@@ -164,7 +164,7 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-database"></i> Datasets <span class="item-count">(1 item)</span></h2>
+<h2><i class="fas fa-database"></i> Datasets</h2>
 </summary>
 <div class="category-container">
 
@@ -184,18 +184,20 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <style>
 .category-section {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 1px solid #e1e4e8;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fafbfc;
+  overflow: hidden;
 }
 
 .category-header {
-  padding: 20px;
+  padding: 15px 18px;
   cursor: pointer;
   user-select: none;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
 .category-header:hover {
@@ -206,69 +208,75 @@ A curated collection of papers, articles, and resources that have influenced my 
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: #24292e;
-  font-size: 1.4em;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 .category-header h2 i {
-  margin-right: 10px;
+  margin-right: 8px;
   color: #0366d6;
-}
-
-.item-count {
-  font-size: 0.75em;
-  color: #586069;
-  font-weight: normal;
+  font-size: 0.9em;
 }
 
 .category-container {
-  padding: 0 20px 20px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+  padding: 0 18px;
   display: grid;
-  gap: 15px;
+  gap: 12px;
+}
+
+details[open] .category-container {
+  max-height: 2000px;
+  padding: 18px;
+  transition: max-height 0.5s ease-in, padding 0.3s ease;
 }
 
 .resource-item {
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #d1d5da;
-  border-radius: 6px;
+  border-radius: 4px;
   background: #ffffff;
 }
 
 .resource-item h3 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #24292e;
-  font-size: 1.1em;
+  font-size: 0.95em;
+  font-weight: 600;
 }
 
 .resource-item h3 i {
-  margin-right: 8px;
+  margin-right: 6px;
   color: #0366d6;
+  font-size: 0.85em;
 }
 
 .resource-item p {
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #586069;
-  font-size: 0.95em;
+  font-size: 0.85em;
 }
 
 .view-all-link {
   text-align: center;
-  margin: 15px 0;
-  padding: 0 20px 20px 20px;
+  margin: 12px 0;
+  padding: 0 18px 15px 18px;
 }
 
 .view-all-link a {
   color: #0366d6;
   text-decoration: none;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border: 1px solid #0366d6;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: all 0.2s ease;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .view-all-link a:hover {
@@ -279,25 +287,31 @@ A curated collection of papers, articles, and resources that have influenced my 
 /* Custom details/summary styling */
 details[open] .category-header {
   border-bottom: 1px solid #e1e4e8;
-  border-radius: 8px 8px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 
 summary {
   list-style: none;
+  position: relative;
 }
 
 summary::-webkit-details-marker {
   display: none;
 }
 
-summary::before {
+summary::after {
   content: "▶";
-  margin-right: 10px;
-  transition: transform 0.2s ease;
-  font-size: 0.8em;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  font-size: 0.7em;
+  color: #586069;
 }
 
-details[open] summary::before {
-  transform: rotate(90deg);
+details[open] summary::after {
+  transform: translateY(-50%) rotate(90deg);
 }
+</style>
 </style>
