@@ -1,5 +1,5 @@
 ---
-permalink: /readings/models/
+permalink: /resources/models/
 title: "Open Source Models"
 seo_title: "Open source AI models - Venkatesh Terikuti"
 excerpt: "Curated collection of high-quality open source AI and ML models."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Open Source Models

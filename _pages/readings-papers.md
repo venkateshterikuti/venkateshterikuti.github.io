@@ -1,5 +1,5 @@
 ---
-permalink: /readings/papers/
+permalink: /resources/papers/
 title: "Research Papers"
 seo_title: "Research papers collection - Venkatesh Terikuti"
 excerpt: "Curated collection of influential research papers in AI, ML, and deep learning."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Research Papers

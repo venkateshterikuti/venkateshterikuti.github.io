@@ -1,5 +1,5 @@
 ---
-permalink: /readings/publications/
+permalink: /resources/publications/
 title: "Academic Publications"
 seo_title: "Academic publications and conferences - Venkatesh Terikuti"
 excerpt: "Academic conferences, journals, and formal research publications."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Academic Publications

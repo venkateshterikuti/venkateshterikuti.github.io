@@ -1,5 +1,5 @@
 ---
-permalink: /readings/blogs/
+permalink: /resources/blogs/
 title: "Blogs & Tutorials"
 seo_title: "Technical blogs and tutorials - Venkatesh Terikuti"
 excerpt: "Curated collection of technical blogs and in-depth tutorials on AI and ML."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Blogs & Tutorials

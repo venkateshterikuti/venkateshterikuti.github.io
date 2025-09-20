@@ -1,5 +1,5 @@
 ---
-permalink: /readings/youtube/
+permalink: /resources/youtube/
 title: "YouTube Channels"
 seo_title: "Educational YouTube channels - Venkatesh Terikuti"
 excerpt: "Curated collection of educational YouTube channels for AI, ML, and data science."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # YouTube Channels

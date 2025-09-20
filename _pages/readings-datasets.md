@@ -1,5 +1,5 @@
 ---
-permalink: /readings/datasets/
+permalink: /resources/datasets/
 title: "Datasets"
 seo_title: "Machine learning datasets - Venkatesh Terikuti"
 excerpt: "Curated collection of high-quality datasets for AI and ML research."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Datasets

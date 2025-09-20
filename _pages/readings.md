@@ -1,5 +1,5 @@
 ---
-permalink: /readings/
+permalink: /resources/
 title: "Resources"
 seo_title: "Venkatesh Terikuti AI and ML resources"
 excerpt: "A curated collection of papers, platforms, and resources for AI and ML."
@@ -46,7 +46,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/papers/">View All Papers →</a>
+<a href="/resources/papers/">View All Papers →</a>
 </div>
 </details>
 
@@ -79,7 +79,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/blogs/">View All Blogs →</a>
+<a href="/resources/blogs/">View All Blogs →</a>
 </div>
 </details>
 
@@ -117,7 +117,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/youtube/">View All YouTube Channels →</a>
+<a href="/resources/youtube/">View All YouTube Channels →</a>
 </div>
 </details>
 
@@ -150,7 +150,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/platforms/">View All Platforms →</a>
+<a href="/resources/platforms/">View All Platforms →</a>
 </div>
 </details>
 
@@ -168,7 +168,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/publications/">View All Publications →</a>
+<a href="/resources/publications/">View All Publications →</a>
 </div>
 </details>
 
@@ -191,7 +191,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/models/">View All Models →</a>
+<a href="/resources/models/">View All Models →</a>
 </div>
 </details>
 
@@ -209,7 +209,7 @@ A curated collection of papers, platforms, and resources that have influenced my
 </div>
 
 <div class="view-all-link">
-<a href="/readings/datasets/">View All Datasets →</a>
+<a href="/resources/datasets/">View All Datasets →</a>
 </div>
 </details>
 

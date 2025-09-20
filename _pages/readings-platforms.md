@@ -1,5 +1,5 @@
 ---
-permalink: /readings/platforms/
+permalink: /resources/platforms/
 title: "Platforms & Communities"
 seo_title: "AI platforms and research communities - Venkatesh Terikuti"
 excerpt: "Interactive platforms, communities, and publishing venues for AI and ML research."
@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Resources</a>
+<a href="/resources/">← Back to Resources</a>
 </div>
 
 # Platforms & Communities
