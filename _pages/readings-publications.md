@@ -30,6 +30,16 @@ Research publications, conferences, and innovative publishing platforms that sha
 <p>Premier conference in machine learning and computational neuroscience, featuring cutting-edge research across theoretical foundations, algorithms, and applications. The conference proceedings provide insights into the latest developments in deep learning, reinforcement learning, optimization, and neuroscience-inspired computing. Serves as a barometer for emerging trends and breakthrough research in AI.</p>
 </div>
 
+<div class="resource-item">
+<h3><i class="fas fa-brain"></i> <a href="https://www.lesswrong.com/" target="_blank"><strong>LessWrong</strong></a></h3>
+<p>Community platform for rationality, AI safety, and effective altruism discussions. Features high-quality posts on decision theory, cognitive science, and existential risk. Hub for researchers and thinkers working on AI alignment and long-term future considerations.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-shield-alt"></i> <a href="https://www.alignmentforum.org/" target="_blank"><strong>AI Alignment Forum</strong></a></h3>
+<p>Specialized forum dedicated to AI alignment research and safety discussions. Features technical posts, research updates, and collaborative work on solving the alignment problem. Essential resource for staying current with AI safety research developments.</p>
+</div>
+
 </div>
 
 <style>

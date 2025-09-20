@@ -5,7 +5,7 @@ author_profile: true
 title: LogitLens From Scratch With Hugging Face Transformers
 seo_title: Implementation of LogitLens explainability method from scratch, without any interpretability libraries.
 
-published: true
+published: false
 ---
 
 In this short tutorial, we'll implement LogitLens to inspect the inner representations of a pre-trained `Phi-1.5`. [LogitLens](https://www.alignmentforum.org/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) is a straightforward yet effective interpretability method.

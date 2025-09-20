@@ -31,6 +31,11 @@ Technical blogs and in-depth tutorials that provide practical insights into AI, 
 </div>
 
 <div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://magazine.sebastianraschka.com/" target="_blank"><strong>Ahead of AI - Sebastian Raschka</strong></a></h3>
+<p>Machine Learning & AI research insights from Sebastian Raschka, read by tens of thousands of researchers and practitioners. Features cutting-edge analysis and educational content to stay ahead in the ever-evolving field of artificial intelligence.</p>
+</div>
+
+<div class="resource-item">
 <h3><i class="fas fa-book"></i> <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank"><strong>Build a Large Language Model (From Scratch)</strong></a></h3>
 <p>Comprehensive guide to building LLMs from the ground up by Sebastian Raschka. Covers tokenization, attention mechanisms, training pipelines, and fine-tuning techniques with hands-on PyTorch implementation. Essential resource for understanding the complete pipeline from data preprocessing to model deployment.</p>
 </div>

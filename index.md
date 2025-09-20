@@ -48,9 +48,6 @@ seo_description: "Venkatesh Terikuti — portfolio and notes covering data scien
 - **Building LLM From Scratch** — `Deep Learning` `LLM` `PyTorch`  
   Complete GPT-style language model implementation from ground up. Built tokenizer, attention mechanisms, transformer blocks, and training pipelines with pretraining and instruction finetuning. <a href="https://github.com/venkateshterikuti/llm-from-scratch" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
 
-- **Casino Intelligence Hub** — `Data Science` `Analytics` `MLOps`  
-  Advanced casino analytics platform analyzing 16M+ transactions to predict player churn, segment users, and detect anomalies. Built end-to-end pipeline with PostgreSQL, Python ML stack, and interactive dashboards. <a href="https://github.com/venkateshterikuti/casino-intelligence-hub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-
 ### In Progress
 - **LLM-Powered Code Review Assistant** — `LLM` `MLOps`  
   Building an intelligent code review system using fine-tuned language models. Integrating with GitHub Actions for automated PR analysis.

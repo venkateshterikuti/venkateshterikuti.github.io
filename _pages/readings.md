@@ -57,6 +57,11 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="category-container">
 
 <div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://magazine.sebastianraschka.com/" target="_blank"><strong>Ahead of AI - Sebastian Raschka</strong></a></h3>
+<p>Machine Learning & AI research insights from Sebastian Raschka, read by tens of thousands of researchers and practitioners. Features cutting-edge analysis and educational content to stay ahead in AI.</p>
+</div>
+
+<div class="resource-item">
 <h3><i class="fas fa-blog"></i> <a href="https://bclarkson-code.com/posts/llm-from-scratch-scalar-autograd/post.html" target="_blank"><strong>LLM From Scratch: Scalar Autograd</strong></a></h3>
 <p>Comprehensive tutorial building a language model from first principles using scalar automatic differentiation. Provides deep understanding of backpropagation mechanics in neural networks.</p>
 </div>
@@ -130,6 +135,16 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="resource-item">
 <h3><i class="fas fa-university"></i> <a href="https://neurips.cc/" target="_blank"><strong>Neural Information Processing Systems (NeurIPS)</strong></a></h3>
 <p>Premier conference in machine learning and computational neuroscience. Features cutting-edge research across theoretical foundations, algorithms, and applications.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-brain"></i> <a href="https://www.lesswrong.com/" target="_blank"><strong>LessWrong</strong></a></h3>
+<p>Community platform for rationality, AI safety, and effective altruism discussions. Hub for researchers working on AI alignment and long-term future considerations.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-shield-alt"></i> <a href="https://www.alignmentforum.org/" target="_blank"><strong>AI Alignment Forum</strong></a></h3>
+<p>Specialized forum for AI alignment research and safety discussions. Features technical posts and collaborative work on solving the alignment problem.</p>
 </div>
 
 </div>
