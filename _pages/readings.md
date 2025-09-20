@@ -57,11 +57,6 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="category-container">
 
 <div class="resource-item">
-<h3><i class="fas fa-blog"></i> <a href="https://magazine.sebastianraschka.com/" target="_blank"><strong>Ahead of AI - Sebastian Raschka</strong></a></h3>
-<p>Machine Learning & AI research insights from Sebastian Raschka, read by tens of thousands of researchers and practitioners. Features cutting-edge analysis and educational content to stay ahead in AI.</p>
-</div>
-
-<div class="resource-item">
 <h3><i class="fas fa-blog"></i> <a href="https://bclarkson-code.com/posts/llm-from-scratch-scalar-autograd/post.html" target="_blank"><strong>LLM From Scratch: Scalar Autograd</strong></a></h3>
 <p>Comprehensive tutorial building a language model from first principles using scalar automatic differentiation. Provides deep understanding of backpropagation mechanics in neural networks.</p>
 </div>
@@ -123,18 +118,13 @@ A curated collection of papers, articles, and resources that have influenced my 
 
 <details class="category-section">
 <summary class="category-header">
-<h2><i class="fas fa-atom"></i> Publications</h2>
+<h2><i class="fas fa-globe"></i> Platforms</h2>
 </summary>
 <div class="category-container">
 
 <div class="resource-item">
 <h3><i class="fas fa-atom"></i> <a href="https://distill.pub/" target="_blank"><strong>Distill.pub</strong></a></h3>
 <p>Revolutionary scientific publishing platform with interactive visualizations and clear explanations of ML concepts. Features live code and novel visualization techniques.</p>
-</div>
-
-<div class="resource-item">
-<h3><i class="fas fa-university"></i> <a href="https://neurips.cc/" target="_blank"><strong>Neural Information Processing Systems (NeurIPS)</strong></a></h3>
-<p>Premier conference in machine learning and computational neuroscience. Features cutting-edge research across theoretical foundations, algorithms, and applications.</p>
 </div>
 
 <div class="resource-item">
@@ -145,6 +135,29 @@ A curated collection of papers, articles, and resources that have influenced my 
 <div class="resource-item">
 <h3><i class="fas fa-shield-alt"></i> <a href="https://www.alignmentforum.org/" target="_blank"><strong>AI Alignment Forum</strong></a></h3>
 <p>Specialized forum for AI alignment research and safety discussions. Features technical posts and collaborative work on solving the alignment problem.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://magazine.sebastianraschka.com/" target="_blank"><strong>Ahead of AI - Sebastian Raschka</strong></a></h3>
+<p>Machine Learning & AI research insights from Sebastian Raschka, read by tens of thousands of researchers and practitioners. Features cutting-edge analysis and educational content to stay ahead in AI.</p>
+</div>
+
+</div>
+
+<div class="view-all-link">
+<a href="/readings/platforms/">View All Platforms →</a>
+</div>
+</details>
+
+<details class="category-section">
+<summary class="category-header">
+<h2><i class="fas fa-university"></i> Publications</h2>
+</summary>
+<div class="category-container">
+
+<div class="resource-item">
+<h3><i class="fas fa-university"></i> <a href="https://neurips.cc/" target="_blank"><strong>Neural Information Processing Systems (NeurIPS)</strong></a></h3>
+<p>Premier conference in machine learning and computational neuroscience. Features cutting-edge research across theoretical foundations, algorithms, and applications.</p>
 </div>
 
 </div>
