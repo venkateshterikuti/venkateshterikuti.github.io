@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Readings</a>
+<a href="/readings/">← Back to Resources</a>
 </div>
 
 # Blogs & Tutorials
@@ -28,6 +28,16 @@ Technical blogs and in-depth tutorials that provide practical insights into AI, 
 <div class="resource-item">
 <h3><i class="fas fa-blog"></i> <a href="https://qwen.ai/blog?id=4074cca80393150c248e508aa62983f9cb7d27cd&from=research.latest-advancements-list" target="_blank"><strong>Qwen Research Blog</strong></a></h3>
 <p>Latest advancements and research insights from the Qwen team at Alibaba Cloud. Features technical deep-dives into large language model development, optimization techniques, and architectural innovations. Provides insider perspectives on scaling challenges and solutions in modern LLM development.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://newsletter.languagemodels.co/" target="_blank"><strong>Language Models & Co. - Jay Alammar</strong></a></h3>
+<p>Newsletter by Jay Alammar focusing on large language models, their internals, and applications. Read by over 27,000 subscribers, featuring insights into cutting-edge developments in language modeling and AI visualization techniques.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://jalammar.github.io/" target="_blank"><strong>Jay Alammar's Blog</strong></a></h3>
+<p>Exceptional visual explanations of machine learning concepts including The Illustrated Transformer, BERT, and Stable Diffusion. Known for making complex ML concepts accessible through outstanding visualizations and interactive content.</p>
 </div>
 
 <div class="resource-item">

@@ -9,7 +9,7 @@ toc: false
 ---
 
 <div class="breadcrumb">
-<a href="/readings/">← Back to Readings</a>
+<a href="/readings/">← Back to Resources</a>
 </div>
 
 # Datasets

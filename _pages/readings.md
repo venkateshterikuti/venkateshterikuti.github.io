@@ -1,14 +1,14 @@
 ---
 permalink: /readings/
-title: "Readings"
-seo_title: "Venkatesh Terikuti readings and research papers"
-excerpt: "A curated list of papers, articles, and resources worth revisiting."
+title: "Resources"
+seo_title: "Venkatesh Terikuti AI and ML resources"
+excerpt: "A curated collection of papers, platforms, and resources for AI and ML."
 layout: single
 classes: wide
 toc: false
 ---
 
-A curated collection of papers, articles, and resources that have influenced my work in data science, machine learning, and LLMs.
+A curated collection of papers, platforms, and resources that have influenced my work in data science, machine learning, and LLMs.
 
 ---
 
@@ -67,8 +67,13 @@ A curated collection of papers, articles, and resources that have influenced my 
 </div>
 
 <div class="resource-item">
-<h3><i class="fas fa-book"></i> <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank"><strong>Build a Large Language Model (From Scratch)</strong></a></h3>
-<p>Comprehensive guide to building LLMs from the ground up by Sebastian Raschka. Covers tokenization, attention mechanisms, training pipelines, and fine-tuning techniques with hands-on PyTorch implementation.</p>
+<h3><i class="fas fa-blog"></i> <a href="https://newsletter.languagemodels.co/" target="_blank"><strong>Language Models & Co. - Jay Alammar</strong></a></h3>
+<p>Newsletter by Jay Alammar focusing on large language models, their internals, and applications. Read by over 27,000 subscribers, featuring insights into cutting-edge developments in language modeling.</p>
+</div>
+
+<div class="resource-item">
+<h3><i class="fas fa-blog"></i> <a href="https://jalammar.github.io/" target="_blank"><strong>Jay Alammar's Blog</strong></a></h3>
+<p>Exceptional visual explanations of ML concepts including The Illustrated Transformer, BERT, and Stable Diffusion. Known for making complex concepts accessible through outstanding visualizations.</p>
 </div>
 
 </div>
