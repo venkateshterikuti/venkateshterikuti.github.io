@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "default",
 locale                   : "en-US"
 title                    : "Venkatesh Terikuti"
 title_separator          : "-"
-subtitle                 : # "Alessio's personal website"
+subtitle                 : "Venkatesh's personal website"
 name                     : "Venkatesh Terikuti"
 description              : "Venkatesh Terikuti — data science, machine learning, LLMs, and visualization"
 url                      : "https://venkateshterikuti.github.io"
@@ -73,7 +73,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : # "dDLCziuVpFsoWUVXwVC9VDkoCSYjI89nDe59V2KFn-g"  # Commented out - replace with your own verification
+google_site_verification :  # Commented out - replace with your own verification
 bing_site_verification   :
 naver_site_verification  :
 yandex_site_verification :
@@ -98,7 +98,7 @@ social:
 analytics:
   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : # G-X7J0YBRDBN  # Commented out - replace with your own tracking ID
+    tracking_id          :  # Commented out - replace with your own tracking ID
     anonymize_ip         : # true, false (default)
 
 
@@ -123,9 +123,6 @@ author:
       icon: "fab fa-fw fa-square-x-twitter" 
       url: "https://x.com/arundeep_T"
 
-    #- label: "Facebook"
-      #icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     
 
 # Site Footer
