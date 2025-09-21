@@ -568,8 +568,7 @@ The journey from prompt engineering to prompt programming has been eye-opening. 
 
 - **DSPy GitHub**: [https://github.com/stanfordnlp/dspy](https://github.com/stanfordnlp/dspy)
 - **DSPy Documentation**: [https://dspy-docs.vercel.app/](https://dspy-docs.vercel.app/)  
-- **Research Paper**: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines"
-- **Community Examples**: Check out the DSPy examples folder for more patterns
+- **Research Paper**: [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714)
 
 *Have you tried DSPy? What patterns have you discovered? I'd love to hear about your experiences building with declarative LLM programming!*
 
