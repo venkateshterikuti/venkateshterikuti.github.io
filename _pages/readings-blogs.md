@@ -41,6 +41,11 @@ Technical blogs and in-depth tutorials that provide practical insights into AI, 
 </div>
 
 <div class="resource-item">
+<h3><i class="fas fa-brain"></i> <a href="https://tokens-for-thoughts.notion.site/post-training-101" target="_blank"><strong>Tokens for Thoughts - Post-Training 101</strong></a></h3>
+<p>Comprehensive guide to post-training techniques in large language models, covering fine-tuning, RLHF, and alignment methods. Provides practical insights into optimizing model behavior after initial training.</p>
+</div>
+
+<div class="resource-item">
 <h3><i class="fas fa-book"></i> <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch" target="_blank"><strong>Build a Large Language Model (From Scratch)</strong></a></h3>
 <p>Comprehensive guide to building LLMs from the ground up by Sebastian Raschka. Covers tokenization, attention mechanisms, training pipelines, and fine-tuning techniques with hands-on PyTorch implementation. Essential resource for understanding the complete pipeline from data preprocessing to model deployment.</p>
 </div>

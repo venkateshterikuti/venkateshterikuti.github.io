@@ -76,6 +76,11 @@ A curated collection of papers, platforms, and resources that have influenced my
 <p>Exceptional visual explanations of ML concepts including The Illustrated Transformer, BERT, and Stable Diffusion. Known for making complex concepts accessible through outstanding visualizations.</p>
 </div>
 
+<div class="resource-item">
+<h3><i class="fas fa-brain"></i> <a href="https://tokens-for-thoughts.notion.site/post-training-101" target="_blank"><strong>Tokens for Thoughts - Post-Training 101</strong></a></h3>
+<p>Comprehensive guide to post-training techniques in LLMs, covering fine-tuning, RLHF, and alignment methods. Provides practical insights into optimizing model behavior.</p>
+</div>
+
 </div>
 
 <div class="view-all-link">
