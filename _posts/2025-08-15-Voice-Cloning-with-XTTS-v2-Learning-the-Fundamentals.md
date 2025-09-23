@@ -258,7 +258,7 @@ This wasn't about creating the best voice cloning system; it was about understan
 
 ---
 
-Thank you for reading! You can find the complete code, configuration files, and implementation details for this voice cloning exploration on GitHub: **[voice-cloning-xtts-exploration](https://github.com/venkateshterikuti/voice-cloning-xtts-exploration)**
+Thank you for reading! You can find the complete code, configuration files, and implementation details for this voice cloning exploration on GitHub: **[TTS-cloning](https://github.com/venkateshterikuti/notebooks/tree/main/TTS-cloning)**
 
 *Educational projects like this prove that sometimes the journey of understanding existing solutions teaches you everything you need to build better ones. The foundation is set—now for the real implementation.*
 
