@@ -395,21 +395,6 @@ Interestingly, entropy sometimes increases in the final layers—possibly when t
 
 ---
 
-## Where to Go From Here
-
-This visualization pipeline works with any Hugging Face Vision Transformer—just change `MODEL_NAME`. Some interesting models to try:
-
-- **DeiT**: Data-efficient training variants with distillation tokens
-- **BEiT**: Self-supervised pretraining with masked image modeling
-- **Swin Transformer**: Hierarchical architecture with shifted windows
-- **ViT-MAE**: Masked autoencoder variants with different attention patterns
-
-The code is modular and reusable—drop it into your research workflow, adapt the color schemes to your publication needs, or extend it with new quantitative metrics.
-
-**The broader lesson**: Attention weights are not just computational mechanisms; they're interpretable summaries of what models consider important. By visualizing them thoughtfully, we bridge the gap between mathematical operations and human understanding.
-
----
-
 ## Code and Resources
 
 The complete code for this project is available in the blog's repository, including:

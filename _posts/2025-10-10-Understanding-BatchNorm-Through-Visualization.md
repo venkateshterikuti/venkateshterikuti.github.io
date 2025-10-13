@@ -298,15 +298,15 @@ Stable activations are important, but gradient stability is critical for trainin
 
 ![Gradient norm heatmaps](/assets/images/batchnorm-blog/05_gradient_norms.png)
 
-**With BatchNorm** (left panel):
-- Gradients decrease smoothly from output (fc2) to input (conv1)
-- Magnitudes remain consistent across epochs
-- No layer suffers from vanishing gradients
-
-**Without BatchNorm** (right panel):
+**Without BatchNorm** (left panel):
 - Gradient magnitudes are more erratic
 - Deeper layers (conv1, conv2) show weaker gradients in later epochs
 - Overall gradients are smaller, suggesting slower learning
+
+**With BatchNorm** (right panel):
+- Gradients decrease smoothly from output (fc2) to input (conv1)
+- Magnitudes remain consistent across epochs
+- No layer suffers from vanishing gradients
 
 **The mechanism**: By normalizing activations, BatchNorm implicitly normalizes the gradients flowing backward. This prevents the exponential decay that causes vanishing gradients in deep networks.
 
@@ -502,25 +502,6 @@ After normalization, outputs are `gamma * normalized + beta`. This preserves the
 - Activation statistics reveal distribution stability
 - Gradient heatmaps expose flow problems in deep networks
 - Density plots show the full distributional story
-
----
-
-## Extending This Work
-
-**Immediate experiments**:
-- **Residual connections**: How does BatchNorm interact with skip connections?
-- **Deeper networks**: Does BatchNorm's advantage grow with depth?
-- **Different batch sizes**: Find the minimum viable batch size for BatchNorm
-
-**Advanced topics**:
-- **Batch Renormalization**: Handling small batches and distribution shift
-- **Synchronized BatchNorm**: Normalizing across multiple GPUs
-- **Adaptive normalization**: Learning when/where to normalize
-
-**Research directions**:
-- **Implicit regularization**: Why does BatchNorm improve generalization?
-- **Loss landscape smoothing**: Does BatchNorm flatten the optimization surface?
-- **Activation sharpness**: Measuring information flow through normalized networks
 
 ---
 
