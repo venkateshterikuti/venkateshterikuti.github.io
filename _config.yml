@@ -110,9 +110,6 @@ author:
   location         : "Tucson, Arizona, United States"
   email            : "terikutivenkat@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:terikutivenkat@gmail.com"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin" 
       url: "https://www.linkedin.com/in/venkat-t-358b47193"
