@@ -27,3 +27,30 @@
     }
   });
 </script>
+
+<!-- Open external links in a new tab -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentHost = window.location.host;
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#') return;
+
+      if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+        return;
+      }
+
+      try {
+        var url = new URL(href, window.location);
+        if (url.host !== currentHost) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      } catch (e) {
+        /* ignore malformed URLs */
+      }
+    });
+  });
+</script>
